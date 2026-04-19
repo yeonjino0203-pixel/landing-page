@@ -83,7 +83,7 @@ export default function LeadCaptureModal({ isOpen, onClose }) {
               placeholder="example@email.com" 
             />
           </div>
-          <button type="submit" className="cta-button modal-submit" disabled={isSubmitting}>
+          <button type="submit" className="glow-button modal-submit" disabled={isSubmitting}>
             {isSubmitting ? '신청 중입니다...' : '무료로 신청하기'}
           </button>
         </form>
