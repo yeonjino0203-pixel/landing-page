@@ -1,0 +1,34 @@
+.pain-section {
+  background-color: var(--color-light-gray); /* Slight off-white to differentiate */
+  border-top: 1px solid var(--color-border);
+}
+
+.pain-container {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.pain-headline {
+  margin-bottom: var(--spacing-lg);
+  color: var(--color-black);
+}
+
+.pain-body p {
+  font-size: clamp(1.1rem, 1.5vw, 1.3rem);
+  line-height: 1.8;
+  margin-bottom: var(--spacing-md);
+  color: var(--color-dark-gray);
+}
+
+.pain-body strong {
+  color: var(--color-black);
+  font-weight: 600;
+}
+
+.text-white-highlight {
+  color: var(--color-black);
+  border-bottom: 2px solid var(--color-black);
+  padding-bottom: 2px;
+  font-weight: bold;
+}
