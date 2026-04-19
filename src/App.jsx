@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import HeroSection from './components/HeroSection';
-import PainSection from './components/PainSection';
-import QualificationSection from './components/QualificationSection';
+import DiagnosisSection from './components/DiagnosisSection';
+import WarningSection from './components/WarningSection';
 import AuthoritySection from './components/AuthoritySection';
-import ProofDataSection from './components/ProofDataSection';
-import SolutionSection from './components/SolutionSection';
+import PrescriptionSection from './components/PrescriptionSection';
+import BarrierSection from './components/BarrierSection';
+import OjoSolutionSection from './components/OjoSolutionSection';
 import CtaSection from './components/CtaSection';
 import LeadCaptureModal from './components/LeadCaptureModal';
 
@@ -16,13 +17,21 @@ function App() {
 
   return (
     <>
-      <HeroSection onOpenModal={openModal} />
-      <PainSection />
-      <QualificationSection />
-      <AuthoritySection />
-      <ProofDataSection />
-      <SolutionSection />
-      <CtaSection onOpenModal={openModal} />
+      {/* Background Glow Blobs */}
+      <div className="glow-blob-1"></div>
+      <div className="glow-blob-2"></div>
+      <div className="glow-blob-3"></div>
+
+      <div className="app-content-wrapper">
+        <HeroSection onOpenModal={openModal} />
+        <DiagnosisSection />
+        <WarningSection />
+        <AuthoritySection />
+        <PrescriptionSection />
+        <BarrierSection />
+        <OjoSolutionSection />
+        <CtaSection onOpenModal={openModal} />
+      </div>
       
       <LeadCaptureModal isOpen={isModalOpen} onClose={closeModal} />
     </>

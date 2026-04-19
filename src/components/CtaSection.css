@@ -1,109 +1,26 @@
 .cta-section {
-  background-color: var(--color-white);
-  padding: 8rem 0;
+  padding: 10rem 2rem 6rem;
+  background: transparent;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  z-index: 10;
 }
-
 .cta-container {
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
 }
-
 .cta-headline {
-  margin-bottom: var(--spacing-xl);
-  color: var(--color-black);
+  font-size: 3.5rem;
+  margin-bottom: 4rem;
+  color: #fff;
+  line-height: 1.2;
+  letter-spacing: -0.04em;
 }
-
-.mece-grid {
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-md);
-  margin-bottom: var(--spacing-xl);
-}
-
-@media (min-width: 768px) {
-  .mece-grid {
-    flex-direction: row;
-  }
-}
-
-.mece-card {
-  flex: 1;
-  padding: var(--spacing-lg);
-  border: 1px solid var(--color-border);
-  transition: transform 0.3s ease;
-}
-
-.mece-card:hover {
-  transform: translateY(-5px);
-}
-
-.card-status-quo {
-  background-color: var(--color-light-gray);
-  color: var(--color-dark-gray);
-}
-
-.card-status-quo .mece-title {
-  color: var(--color-silver);
-}
-
-.card-ojo {
-  background-color: var(--color-black);
-  color: var(--color-white);
-  border-color: var(--color-black);
-}
-
-.card-ojo .mece-title {
-  color: var(--color-white);
-}
-
-.mece-title {
-  font-family: var(--font-headline);
-  font-size: 1.3rem;
-  font-weight: 800;
-  margin-bottom: 2rem;
-  line-height: 1.4;
-  letter-spacing: -0.02em;
-}
-
-.mece-list {
-  list-style: none;
-  padding: 0;
-}
-
-.mece-list li {
-  margin-bottom: 1.4rem;
-  position: relative;
-  padding-left: 2rem;
-  font-size: 1.05rem;
-  line-height: 1.5;
-}
-
-.mece-list li::before {
-  content: '✓';
-  position: absolute;
-  left: 0;
-  top: 0;
-  font-weight: 800;
-  color: var(--color-white);
-}
-
-.card-status-quo .mece-list li::before {
-  content: '✕';
-  color: var(--color-silver);
-}
-
-.text-left {
-  text-align: left;
-}
-
-.cta-subheadline {
-  font-size: clamp(1.1rem, 2vw, 1.3rem);
-  margin-bottom: var(--spacing-lg);
-  color: var(--color-black);
-  font-weight: 600;
-}
-
-.final-cta-button {
-  padding: 1.2rem 3rem;
-  font-size: 1.2rem;
+.footer {
+  margin-top: 6rem;
+  border-top: 1px solid var(--card-border);
+  padding-top: 2rem;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
 }
