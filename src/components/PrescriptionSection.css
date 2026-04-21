@@ -4,10 +4,13 @@
   position: relative;
 }
 .grid-5 {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  display: flex;
+  flex-direction: column;
   gap: 2rem;
   margin-top: 4rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .grid-5 .base-card {
   background: var(--card-bg);
@@ -21,17 +24,25 @@
   overflow: hidden;
 }
 .grid-5 .base-card::before {
-  content: '';
+  content: "";
   position: absolute;
-  top: 0; left: 0; right: 0; height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
   opacity: 0;
   transition: opacity 0.4s ease;
 }
 .grid-5 .base-card:hover {
-  border-color: rgba(255,255,255,0.2);
+  border-color: rgba(255, 255, 255, 0.2);
   background: rgba(255, 255, 255, 0.05);
-  box-shadow: 0 10px 40px rgba(255,255,255,0.05);
+  box-shadow: 0 10px 40px rgba(255, 255, 255, 0.05);
   transform: translateY(-4px);
 }
 .grid-5 .base-card:hover::before {
