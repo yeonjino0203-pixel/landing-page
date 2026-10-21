@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="상담 신청이 완료되었습니다. 담당자가 24시간 내 연락드리겠습니다." />
+  <meta name="robots" content="noindex" />
+  <title>상담 신청 완료 — OJO 구조 개선</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Pretendard -->
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy:    { DEFAULT: '#191F28', deep: '#0F141C', light: '#3D4659' },
+            paper:   '#F7F7F7',
+            ink:     '#0F1B2A',
+          },
+          fontFamily: {
+            sans: ['"Pretendard Variable"', 'Pretendard', '-apple-system', 'BlinkMacSystemFont', '"Apple SD Gothic Neo"', 'system-ui', 'sans-serif'],
+          },
+          maxWidth: { 'content': '76rem' },
+          boxShadow: {
+            'cta': '0 10px 30px -8px rgba(25,31,40,0.30)',
+            'cta-hover': '0 20px 50px -10px rgba(25,31,40,0.5)',
+            'soft': '0 4px 20px -4px rgba(25,31,40,0.06)',
+          },
+          borderRadius: { '4xl': '2rem', '5xl': '2.5rem' },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    body {
+      font-family: 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+      color: #0F1B2A;
+      word-break: keep-all;
+      line-height: 1.7;
+      letter-spacing: -0.01em;
+      -webkit-font-smoothing: antialiased;
+    }
+    .gradient-bg {
+      background:
+        radial-gradient(ellipse 65% 55% at 25% 30%, rgba(125,207,255,0.18), transparent 70%),
+        radial-gradient(ellipse 55% 55% at 85% 70%, rgba(255,245,221,0.45), transparent 70%),
+        #ffffff;
+    }
+
+    /* 체크 등장 */
+    @keyframes checkBounce {
+      0%   { opacity: 0; transform: scale(0.5); }
+      60%  { opacity: 1; transform: scale(1.12); }
+      80%  { transform: scale(0.96); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+    .check-bounce { animation: checkBounce 0.7s ease-out forwards; opacity: 0; }
+
+    /* fade up */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(15px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .fade-up   { animation: fadeUp 0.7s ease-out forwards; opacity: 0; }
+    .delay-1   { animation-delay: 0.30s; }
+    .delay-2   { animation-delay: 0.50s; }
+    .delay-3   { animation-delay: 0.70s; }
+    .delay-4   { animation-delay: 0.90s; }
+
+    /* 체크 펄스 (지속) */
+    .check-ring {
+      animation: checkRing 2.4s ease-in-out infinite;
+      box-shadow: 0 0 0 0 rgba(25,31,40,0.30);
+    }
+    @keyframes checkRing {
+      0%, 100% { box-shadow: 0 10px 30px -8px rgba(25,31,40,0.30), 0 0 0 0 rgba(25,31,40,0); }
+      50%      { box-shadow: 0 10px 30px -8px rgba(25,31,40,0.30), 0 0 0 14px rgba(25,31,40,0.06); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .check-bounce, .fade-up, .check-ring { animation: none !important; opacity: 1 !important; }
+    }
+  </style>
+</head>
+
+<body class="gradient-bg min-h-screen flex items-center justify-center px-5 py-12">
+  <div class="max-w-xl w-full text-center">
+
+    <!-- 체크 아이콘 -->
+    <div class="check-bounce mx-auto mb-8 md:mb-10">
+      <div class="check-ring w-20 h-20 md:w-24 md:h-24 mx-auto rounded-full bg-navy flex items-center justify-center">
+        <svg class="w-10 h-10 md:w-12 md:h-12 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <polyline points="20 6 9 17 4 12"/>
+        </svg>
+      </div>
+    </div>
+
+    <!-- 헤드라인 -->
+    <h1 class="fade-up delay-1 text-3xl md:text-5xl font-extrabold text-ink leading-tight tracking-tight">
+      상담 신청이<br/>
+      완료되었습니다.
+    </h1>
+
+    <!-- 본문 -->
+    <p class="fade-up delay-2 mt-6 md:mt-7 text-base md:text-lg text-ink/70 leading-relaxed">
+      <span class="font-bold text-navy">24시간 내</span> 담당자가 입력하신<br/>
+      핸드폰번호로 연락드립니다.
+    </p>
+
+    <!-- 안내 박스 -->
+    <div class="fade-up delay-3 mt-10 md:mt-12 mx-auto max-w-lg rounded-3xl bg-white border border-ink/[0.06] px-6 py-7 md:px-8 md:py-8 shadow-soft text-left">
+      <p class="text-sm md:text-base font-bold text-navy tracking-wider mb-5">앞으로의 진행</p>
+      <ol class="space-y-3.5 text-sm md:text-base text-ink/85 leading-snug">
+        <li class="flex gap-3">
+          <span class="shrink-0 w-6 h-6 rounded-full bg-navy text-white text-xs font-extrabold flex items-center justify-center mt-0.5">1</span>
+          <span>담당자가 <b>24시간 내</b> 연락드립니다.</span>
+        </li>
+        <li class="flex gap-3">
+          <span class="shrink-0 w-6 h-6 rounded-full bg-navy text-white text-xs font-extrabold flex items-center justify-center mt-0.5">2</span>
+          <span>전화 상담은 약 <b>15~30분</b> 소요됩니다.</span>
+        </li>
+        <li class="flex gap-3">
+          <span class="shrink-0 w-6 h-6 rounded-full bg-navy text-white text-xs font-extrabold flex items-center justify-center mt-0.5">3</span>
+          <span>상담 후 결정은 전적으로 대표님 몫이며, <b>결제 강요는 없습니다</b>.</span>
+        </li>
+      </ol>
+    </div>
+
+    <!-- 홈 버튼 -->
+    <div class="fade-up delay-4 mt-10 md:mt-12">
+      <a href="/" class="inline-flex items-center justify-center bg-navy hover:bg-navy-deep text-white font-bold text-base md:text-lg rounded-full px-8 py-3.5 md:px-10 md:py-4 shadow-cta hover:shadow-cta-hover transition">
+        홈으로 돌아가기
+      </a>
+    </div>
+
+    <!-- 푸터 -->
+    <p class="fade-up delay-4 mt-12 text-xs md:text-sm text-ink/45">
+      OJO · 사업자등록번호 338-08-02627
+    </p>
+
+  </div>
+</body>
+</html>

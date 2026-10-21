@@ -1,11 +1,11 @@
 :root {
-  /* Vercel / Linear Modern SaaS Palette */
-  --bg-color: #000000;
-  --card-bg: rgba(255, 255, 255, 0.03);
+  /* Trustworthy Professional SaaS Palette */
+  --bg-color: #020617; /* Dark Slate 950 for a solid, reliable feel */
+  --card-bg: rgba(255, 255, 255, 0.04);
   --card-border: rgba(255, 255, 255, 0.08);
   --text-primary: #FFFFFF;
-  --text-secondary: #A1A1AA; /* Zinc 400 */
-  --accent-color: #3B82F6; /* Blueish */
+  --text-secondary: #94A3B8; /* Slate 400 */
+  --accent-color: #2563EB; /* Solid Corporate Blue 600 */
 }
 
 * {
@@ -52,29 +52,29 @@ h1, h2, h3, h4, h5, h6 {
 .glow-blob-1 {
   top: -10vw; left: -10vw;
   width: 50vw; height: 50vw;
-  background: radial-gradient(circle, rgba(147,51,234,0.3) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(37,99,235,0.2) 0%, transparent 70%); /* Deep Blue */
 }
 .glow-blob-2 {
   bottom: -10vw; right: -10vw;
   width: 60vw; height: 60vw;
-  background: radial-gradient(circle, rgba(59,130,246,0.2) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(14,165,233,0.15) 0%, transparent 70%); /* Sky Blue */
 }
 .glow-blob-3 {
   top: 40vh; left: 50vw;
   transform: translateX(-50%);
   width: 40vw; height: 40vw;
-  background: radial-gradient(circle, rgba(236,72,153,0.15) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(79,70,229,0.15) 0%, transparent 70%); /* Indigo */
 }
 
 /* Utilities */
 .text-center { text-align: center; }
 .text-gradient {
-  background: linear-gradient(180deg, #FFFFFF 0%, #A1A1AA 100%);
+  background: linear-gradient(180deg, #FFFFFF 0%, #94A3B8 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .text-gradient-accent {
-  background: linear-gradient(135deg, #60A5FA, #A78BFA);
+  background: linear-gradient(135deg, #60A5FA, #2563EB);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -111,8 +111,8 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Glow Button Pill */
 .glow-button {
-  background: #FFFFFF;
-  color: #000000;
+  background: #2563EB;
+  color: #FFFFFF;
   border-radius: 9999px;
   padding: 1.25rem 3rem;
   font-size: 1.1rem;
@@ -126,7 +126,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .glow-button:hover {
   transform: scale(1.03);
-  box-shadow: 0 0 30px rgba(255,255,255,0.3);
+  box-shadow: 0 0 30px rgba(37, 99, 235, 0.5); /* Blue glow */
 }
 
 /* Fade in for standard components */
