@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="정부기관은 서류만 보지 않습니다. 회사의 사업 구조를 봅니다. 1년 200개 컨설팅·누적 500억 자금 흐름 설계 — OJO 정책자금 구조 개선 무료 상담." />
-  <title>정부기관은 서류만 보지 않습니다 — 정책자금 구조 개선 무료 상담</title>
+  <meta name="description" content="돈도 시간도 남지 않는 노력은, 성장이 아니라 소모입니다. 고객에게 팔리고, 대표에게 남는 사업구조 — OJO 1:1 사업구조 진단." />
+  <title>OJO 1:1 사업구조 진단 — 고객에게 팔리고, 대표에게 남는 사업구조</title>
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17908236137"></script>
@@ -12,988 +12,881 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'AW-17908236137');
   </script>
 
-  <!-- Tailwind CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- Pretendard -->
   <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css" />
 
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            // 메인 강조 — 차콜 (검정에 가까운 모던 톤)
-            navy:    { DEFAULT: '#191F28', deep: '#0F141C', light: '#3D4659' },
-            danger:  '#C00000',
-            paper:   '#F7F7F7',
-            ink:     '#0F1B2A',
-            // 부드러운 액센트 컬러 (Toss-inspired)
-            sky:     '#E6F3FF',
-            cream:   '#FFF5DD',
-            mint:    '#E5F6F0',
-            blush:   '#FFE8E0',
-            lavender:'#EFE9FF',
-          },
-          fontFamily: {
-            sans: ['"Pretendard Variable"', 'Pretendard', '-apple-system', 'BlinkMacSystemFont', '"Apple SD Gothic Neo"', 'system-ui', 'sans-serif'],
-          },
-          maxWidth: {
-            'content': '76rem',
-          },
-          boxShadow: {
-            'cta': '0 10px 30px -8px rgba(25,31,40,0.30)',
-            'cta-hover': '0 20px 50px -10px rgba(25,31,40,0.5)',
-            'soft': '0 4px 20px -4px rgba(25,31,40,0.06)',
-          },
-          borderRadius: {
-            '4xl': '2rem',
-            '5xl': '2.5rem',
-          },
-        },
-      },
-    };
-  </script>
-
   <style>
-    html { scroll-behavior: smooth; }
+    :root {
+      --paper: #F4F3EF;
+      --paper-2: #EAE8E2;
+      --card: #FFFFFF;
+      --ink: #191919;
+      --ink-2: rgba(25,25,25,.72);
+      --ink-3: rgba(25,25,25,.48);
+      --line: rgba(25,25,25,.08);
+
+      --night: #1B1A17;
+      --night-2: #232220;
+      --cream: #F0EDE6;
+      --cream-2: rgba(240,237,230,.72);
+      --cream-3: rgba(240,237,230,.45);
+      --line-d: rgba(240,237,230,.10);
+
+      --accent: #E8763C;
+      --accent-deep: #E0632A;
+      --accent-soft: #FFB482;
+      --accent-tint: rgba(232,118,60,.10);
+
+      --wrap: 1040px;
+      --gutter: 20px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
     body {
-      font-family: 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
-      color: #0F1B2A;
-      background: #FFFFFF;
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", system-ui, sans-serif;
+      font-size: 16px;
+      line-height: 1.75;
+      letter-spacing: -0.015em;
       word-break: keep-all;
-      line-height: 1.7;
-      letter-spacing: -0.01em;
+      overflow-wrap: break-word;
       -webkit-font-smoothing: antialiased;
     }
-    .h-hero    { font-size: clamp(2.75rem, 8vw, 4.5rem);  line-height: 1.12; letter-spacing: -0.035em; font-weight: 800; }
-    .h-display { font-size: clamp(2.25rem, 6vw, 3.5rem);  line-height: 1.18; letter-spacing: -0.03em;  font-weight: 800; }
-    .h-section { font-size: clamp(1.875rem, 5vw, 3rem);   line-height: 1.22; letter-spacing: -0.03em;  font-weight: 800; }
+    img, svg { display: block; max-width: 100%; }
+    button { font: inherit; color: inherit; cursor: pointer; }
+    a { color: inherit; text-decoration: none; }
+    p { margin: 0; }
+    b, strong { font-weight: 700; }
 
-    /* 절제된 그라데이션 배경 */
-    .gradient-hero {
-      background:
-        radial-gradient(ellipse 65% 55% at 25% 30%, rgba(125,207,255,0.18), transparent 70%),
-        radial-gradient(ellipse 55% 55% at 85% 70%, rgba(255,245,221,0.45), transparent 70%),
-        #ffffff;
-    }
-    .gradient-aurora {
-      background:
-        radial-gradient(ellipse 65% 60% at 30% 40%, rgba(125,207,255,0.10), transparent 70%),
-        #FBFBFC;
-    }
-    .gradient-sunset {
-      background:
-        radial-gradient(ellipse 65% 60% at 50% 40%, rgba(255,245,221,0.40), transparent 70%),
-        #FBFBFC;
-    }
-    .gradient-cta {
-      background: linear-gradient(135deg, #0F141C 0%, #191F28 55%, #2C3543 100%);
-    }
-    .gradient-onboarding {
-      background:
-        radial-gradient(ellipse 70% 60% at 80% 20%, rgba(125,207,255,0.20), transparent 60%),
-        radial-gradient(ellipse 60% 70% at 20% 80%, rgba(255,217,107,0.10), transparent 60%),
-        #191F28;
-    }
+    .wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 var(--gutter); }
+    @media (min-width: 768px) { :root { --gutter: 32px; } }
 
-    .reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s ease-out, transform .7s ease-out; }
-    .reveal.is-visible { opacity: 1; transform: translateY(0); }
+    /* ---------- Sections ---------- */
+    .sec { padding: 104px 0; position: relative; }
+    .sec--light { background: var(--paper); color: var(--ink); }
+    .sec--dark  { background: var(--night); color: var(--cream); }
+    @media (max-width: 767px) { .sec { padding: 76px 0; } }
 
-    .btn-cta { transition: transform .2s ease, box-shadow .2s ease, background-color .2s ease; }
-    .btn-cta:hover { transform: scale(1.03); }
-    .btn-cta:active { transform: scale(0.99); }
-
-    .modal-backdrop { background: rgba(15, 27, 42, 0.65); backdrop-filter: blur(4px); }
-
-    .field-label { font-size: 0.9rem; font-weight: 600; color: #1F4E79; }
-    .field-input {
-      width: 100%;
-      border: 1px solid #D6DEE8;
-      border-radius: 0.625rem;
-      padding: 0.75rem 0.95rem;
-      font-size: 1rem;
-      background: #FFFFFF;
-      transition: border-color .15s ease, box-shadow .15s ease;
+    .label {
+      display: flex; align-items: center; gap: 14px;
+      font-size: 12px; font-weight: 700; letter-spacing: .18em;
+      color: var(--accent); text-transform: uppercase;
+      margin-bottom: 20px;
     }
-    .field-input:focus {
-      outline: none;
-      border-color: #1F4E79;
-      box-shadow: 0 0 0 3px rgba(31,78,121,0.15);
+    .label::before { content: ""; width: 32px; height: 1.5px; background: var(--accent); }
+    .label .sub { color: var(--ink-3); font-weight: 600; }
+    .sec--dark .label .sub { color: var(--cream-3); }
+
+    .h2 {
+      margin: 0;
+      font-size: clamp(28px, 4.2vw, 40px);
+      line-height: 1.25;
+      font-weight: 800;
+      letter-spacing: -0.045em;
     }
-    .field-error { border-color: #C00000 !important; }
+    .h2 em, .h1 em { font-style: normal; color: var(--accent); }
 
-    .modal-scroll::-webkit-scrollbar { width: 8px; }
-    .modal-scroll::-webkit-scrollbar-thumb { background: #C9D2DD; border-radius: 8px; }
+    .lead { margin-top: 24px; font-size: 17px; color: var(--ink-2); max-width: 680px; }
+    .sec--dark .lead { color: var(--cream-2); }
+    .lead + .lead { margin-top: 14px; }
+    .lead strong { color: var(--ink); }
+    .sec--dark .lead strong { color: var(--cream); }
+    @media (max-width: 767px) { .lead { font-size: 16px; } }
 
-    .arrow-down {
-      width: 2px; height: 28px; background: #191F28;
-      position: relative; margin: 0 auto;
+    .br-m { display: none; }
+    @media (max-width: 767px) { .br-m { display: inline; } .br-d { display: none; } }
+
+    /* ---------- Buttons ---------- */
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      height: 54px; padding: 0 28px; border-radius: 999px; border: 0;
+      font-size: 16px; font-weight: 700; letter-spacing: -0.02em;
+      transition: transform .2s ease, background .2s ease, box-shadow .2s ease, border-color .2s ease;
+      white-space: nowrap;
     }
-    .arrow-down::after {
-      content: ""; position: absolute; left: 50%; bottom: -2px;
-      transform: translateX(-50%) rotate(45deg);
-      width: 10px; height: 10px;
-      border-right: 2px solid #191F28; border-bottom: 2px solid #191F28;
+    .btn--primary { background: var(--accent); color: #fff; box-shadow: 0 10px 28px -10px rgba(232,118,60,.65); }
+    .btn--primary:hover { background: var(--accent-deep); transform: translateY(-1px); }
+    .btn--ghost { background: transparent; color: var(--cream); border: 1px solid rgba(240,237,230,.28); }
+    .btn--ghost:hover { border-color: var(--cream); }
+    .btn--ghost-l { background: transparent; color: var(--ink); border: 1px solid rgba(25,25,25,.2); }
+    .btn--ghost-l:hover { border-color: var(--ink); }
+    .btn .arrow { transition: transform .2s ease; }
+    .btn:hover .arrow { transform: translateX(3px); }
+
+    /* ---------- Header ---------- */
+    .hdr {
+      position: fixed; inset: 0 0 auto 0; z-index: 40;
+      background: rgba(27,26,23,.86);
+      backdrop-filter: saturate(140%) blur(12px);
+      -webkit-backdrop-filter: saturate(140%) blur(12px);
+      border-bottom: 1px solid var(--line-d);
     }
+    .hdr .wrap { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+    .logo { color: var(--cream); font-weight: 900; font-size: 22px; letter-spacing: -0.04em; }
+    .logo span { color: var(--accent); }
+    .hdr .btn { height: 40px; padding: 0 18px; font-size: 14px; box-shadow: none; }
 
-    /* Founder identity card */
-    .id-avatar {
-      width: 56px; height: 56px;
-      border-radius: 999px;
-      background: #191F28;
-      color: #fff;
-      display: inline-flex; align-items: center; justify-content: center;
-      font-weight: 800; font-size: 1.25rem;
-      letter-spacing: 0;
+    /* ---------- Hero ---------- */
+    .hero {
+      background: var(--night); color: var(--cream);
+      padding: 168px 0 128px; position: relative; overflow: hidden;
     }
-
-    /* === 모션 그래픽 === */
-    .case-card { transition: transform .25s ease, box-shadow .25s ease; }
-    .case-card:hover { transform: translateY(-3px); }
-
-    .glow-pulse { animation: glowPulse 3.5s ease-in-out infinite; }
-    @keyframes glowPulse {
-      0%, 100% { box-shadow: 0 10px 30px -8px rgba(25,31,40,0.30); }
-      50%      { box-shadow: 0 18px 50px -8px rgba(25,31,40,0.55); }
+    .hero::before {
+      content: ""; position: absolute; inset: 0;
+      background-image:
+        linear-gradient(rgba(240,237,230,.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(240,237,230,.035) 1px, transparent 1px);
+      background-size: 56px 56px;
+      mask-image: radial-gradient(ellipse 80% 70% at 30% 40%, #000 30%, transparent 80%);
+      -webkit-mask-image: radial-gradient(ellipse 80% 70% at 30% 40%, #000 30%, transparent 80%);
     }
-
-    .gap-arrow { animation: gapArrow 2s ease-in-out infinite; }
-    @keyframes gapArrow {
-      0%, 100% { transform: translateX(0); }
-      50%      { transform: translateX(6px); }
+    .hero .glow {
+      position: absolute; width: 56px; height: 56px; background: var(--accent);
+      opacity: .07; pointer-events: none;
     }
-
-    .scroll-progress {
-      position: fixed; top: 0; left: 0; height: 3px;
-      background: #191F28;
-      width: 0%;
-      z-index: 60;
-      transition: width .12s linear;
+    .hero .wrap { position: relative; }
+    .hero .eyebrow { font-size: 18px; font-weight: 600; color: var(--cream-2); margin-bottom: 18px; letter-spacing: -0.02em; }
+    .h1 {
+      margin: 0;
+      font-size: clamp(36px, 6.4vw, 64px);
+      line-height: 1.2; font-weight: 800; letter-spacing: -0.05em;
     }
-
-    @media (prefers-reduced-motion: reduce) {
-      .glow-pulse, .gap-arrow { animation: none !important; }
-      .case-card:hover { transform: none; }
+    .hero .ctas { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 44px; }
+    @media (max-width: 767px) {
+      .hero { padding: 128px 0 88px; }
+      .hero .eyebrow { font-size: 16px; }
+      .hero .glow { display: none; }
+      .hero .ctas .btn { flex: 1 1 100%; }
     }
 
-    /* FAQ 아코디언 */
-    .faq-item summary::-webkit-details-marker { display: none; }
-    .faq-item summary::marker { content: ''; }
-    .faq-item[open] .faq-icon { transform: rotate(45deg); background: #191F28; color: #fff; border-color: #191F28; }
-    .faq-item[open] { background: #FFFFFF; }
-
-    /* === 추가 모션 그래픽 (퀄리티/신뢰도 강화) === */
-
-    /* 4-Why 게이지 막대 */
-    .gauge-bar {
-      position: relative;
-      height: 6px;
-      border-radius: 999px;
-      background: rgba(255,255,255,0.12);
+    /* ---------- 1. 원했던 삶 ---------- */
+    .pairs { margin-top: 48px; display: grid; gap: 12px; }
+    .pair {
+      display: grid; grid-template-columns: 1fr 40px 1fr; align-items: stretch;
+      background: var(--card); border-radius: 18px;
+      box-shadow: 0 1px 2px rgba(25,25,25,.04), 0 8px 24px -12px rgba(25,25,25,.10);
       overflow: hidden;
     }
-    .gauge-fill {
-      position: absolute; top: 0; left: 0; bottom: 0;
-      border-radius: 999px;
-      width: 0;
-    }
-    .gauge-fill-full { background: rgba(255,255,255,0.85); }
-    .gauge-fill-half { background: rgba(255,232,224,0.85); }
-
-    .reveal.is-visible .gauge-fill-full {
-      animation: gaugeFillFull 1.4s ease-out forwards;
-      animation-delay: var(--delay, 0s);
-    }
-    .reveal.is-visible .gauge-fill-half {
-      animation: gaugeFillHalf 1.4s ease-out forwards;
-      animation-delay: var(--delay, 0s);
-    }
-    @keyframes gaugeFillFull { from { width: 0%; } to { width: 100%; } }
-    @keyframes gaugeFillHalf { from { width: 0%; } to { width: 35%; } }
-
-    /* 체크 펄스 (분석 완료 신호) */
-    .check-pulse {
-      animation: checkPulse 2.2s ease-in-out infinite;
-      box-shadow: 0 0 0 0 rgba(168,229,213,0.6);
-    }
-    @keyframes checkPulse {
-      0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(168,229,213,0.6); }
-      50%      { transform: scale(1.1); box-shadow: 0 0 0 4px rgba(168,229,213,0); }
+    .pair > div { padding: 22px 26px; }
+    .pair .tag { display: block; font-size: 12px; font-weight: 700; letter-spacing: .04em; margin-bottom: 6px; }
+    .pair .want .tag { color: var(--accent); }
+    .pair .now  { background: var(--paper-2); }
+    .pair .now  .tag { color: var(--ink-3); }
+    .pair .want p { font-weight: 700; font-size: 17px; }
+    .pair .now  p { color: var(--ink-2); font-size: 16px; }
+    .pair .vs { display: flex; align-items: center; justify-content: center; padding: 0; color: var(--ink-3); background: linear-gradient(90deg, var(--card) 50%, var(--paper-2) 50%); }
+    .pair .vs span { width: 32px; height: 32px; border-radius: 50%; background: var(--card); border: 1px solid var(--line); display: grid; place-items: center; font-size: 14px; }
+    @media (max-width: 767px) {
+      .pair { grid-template-columns: 1fr; }
+      .pair .vs { height: 0; background: none; position: relative; z-index: 1; }
+      .pair .vs span { transform: rotate(90deg); }
+      .pair > div { padding: 20px 22px; }
     }
 
-    /* CTA 버튼 미세 글로우 펄스 */
-    .btn-glow { animation: btnGlow 2.6s ease-in-out infinite; }
-    @keyframes btnGlow {
-      0%, 100% { box-shadow: 0 10px 30px -8px rgba(25,31,40,0.30), 0 0 0 0 rgba(25,31,40,0); }
-      50%      { box-shadow: 0 10px 30px -8px rgba(25,31,40,0.30), 0 0 0 10px rgba(25,31,40,0.06); }
-    }
-    .btn-glow:hover { animation: none; }
+    .story { margin-top: 56px; display: grid; gap: 14px; font-size: 17px; color: var(--ink-2); max-width: 720px; }
+    .story strong { color: var(--ink); }
+    .more-row { display: flex; flex-wrap: wrap; gap: 8px; margin: 4px 0; }
+    .more-row span { font-size: 14px; font-weight: 700; padding: 6px 14px; border-radius: 999px; background: var(--card); border: 1px solid var(--line); color: var(--ink); }
 
-    /* Hero 화살표 부드러운 위아래 펄스 */
-    .arrow-pulse {
-      display: inline-block;
-      animation: arrowPulse 1.8s ease-in-out infinite;
+    .callout {
+      margin-top: 56px; padding: 40px 40px;
+      background: var(--night); color: var(--cream); border-radius: 22px;
+      position: relative; overflow: hidden;
     }
-    @keyframes arrowPulse {
-      0%, 100% { transform: translateY(0); opacity: 0.8; }
-      50%      { transform: translateY(3px); opacity: 1; }
-    }
+    .callout::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 4px; background: var(--accent); }
+    .callout p { font-size: clamp(20px, 2.6vw, 26px); line-height: 1.5; font-weight: 500; letter-spacing: -0.035em; color: var(--cream-2); }
+    .callout strong { color: var(--cream); font-weight: 800; }
+    .callout strong em { font-style: normal; color: var(--accent-soft); }
+    @media (max-width: 767px) { .callout { padding: 30px 24px 30px 28px; } }
 
-    /* 헤드라인 단어별 fade-up (Hero 진입 시) */
-    .reveal.is-visible .word-stagger > * {
-      animation: wordFadeUp .7s ease-out both;
+    /* ---------- 2. 원인 ---------- */
+    .cause-key {
+      margin-top: 36px; padding: 28px 30px; border-radius: 18px;
+      border: 1px solid rgba(232,118,60,.45);
+      background: linear-gradient(180deg, rgba(232,118,60,.12), rgba(232,118,60,.04));
     }
-    .reveal.is-visible .word-stagger > *:nth-child(1) { animation-delay: 0.05s; }
-    .reveal.is-visible .word-stagger > *:nth-child(2) { animation-delay: 0.20s; }
-    .reveal.is-visible .word-stagger > *:nth-child(3) { animation-delay: 0.35s; }
-    @keyframes wordFadeUp {
-      from { opacity: 0; transform: translateY(12px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
+    .cause-key .k { font-size: 13px; font-weight: 700; color: var(--accent-soft); margin-bottom: 8px; }
+    .cause-key p { font-size: clamp(18px, 2.2vw, 22px); font-weight: 700; color: var(--cream); line-height: 1.55; letter-spacing: -0.03em; }
 
-    /* 섹션 타이틀 미세 그라데이션 강조 (h-section 등에 적용) */
-    .title-shine {
-      background: linear-gradient(110deg, #0F1B2A 0%, #0F1B2A 45%, #3D4659 55%, #0F1B2A 65%);
-      background-size: 250% 100%;
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-      animation: titleShine 6s ease-in-out infinite;
-    }
-    @keyframes titleShine {
-      0%, 100% { background-position: 100% 50%; }
-      50%      { background-position: 0% 50%; }
-    }
+    .loop-wrap { margin-top: 56px; display: grid; grid-template-columns: 1.05fr 1fr; gap: 48px; align-items: center; }
+    @media (max-width: 899px) { .loop-wrap { grid-template-columns: 1fr; gap: 36px; } }
+    .loop-text { display: grid; gap: 14px; color: var(--cream-2); font-size: 16px; }
+    .loop-text strong { color: var(--cream); }
+    .side-notes { display: grid; gap: 10px; margin-top: 8px; }
+    .side-note { padding: 18px 20px; border-radius: 14px; border: 1px solid var(--line-d); background: var(--night-2); }
+    .side-note .k { font-size: 13px; color: var(--cream-3); margin-bottom: 4px; }
+    .side-note p { color: var(--cream); font-size: 15px; }
 
+    .loop { position: relative; width: 100%; max-width: 440px; aspect-ratio: 1; margin: 0 auto; }
+    .loop svg.ring { position: absolute; inset: 0; width: 100%; height: 100%; }
+    .loop .node {
+      position: absolute; transform: translate(-50%, -50%);
+      background: var(--night-2); border: 1px solid var(--line-d);
+      color: var(--cream); font-size: 14px; font-weight: 600; line-height: 1.35;
+      padding: 9px 14px; border-radius: 12px; text-align: center; white-space: nowrap;
+    }
+    .loop .node.hot { background: var(--accent); border-color: var(--accent); color: #fff; font-weight: 700; }
+    .loop .center {
+      position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
+      text-align: center; font-size: 13px; color: var(--cream-3); line-height: 1.5;
+    }
+    .loop .center b { display: block; font-size: 20px; color: var(--cream); letter-spacing: -0.03em; }
+    @media (max-width: 480px) { .loop .node { font-size: 12.5px; padding: 7px 10px; } .loop .center b { font-size: 17px; } }
+
+    .busy { margin-top: 64px; padding-top: 40px; border-top: 1px solid var(--line-d); color: var(--cream-2); font-size: 17px; max-width: 720px; display: grid; gap: 6px; }
+    .busy strong { color: var(--cream); }
+    .big-quote {
+      margin-top: 48px; text-align: center;
+      font-size: clamp(26px, 4vw, 40px); font-weight: 500; line-height: 1.4; letter-spacing: -0.045em; color: var(--cream-2);
+    }
+    .big-quote strong { color: var(--cream); font-weight: 800; }
+    .hl { background: linear-gradient(transparent 62%, rgba(232,118,60,.55) 62%, rgba(232,118,60,.55) 92%, transparent 92%); padding: 0 2px; }
+    .sec--light .hl { background: linear-gradient(transparent 62%, rgba(232,118,60,.32) 62%, rgba(232,118,60,.32) 92%, transparent 92%); }
+
+    /* ---------- 3. 해결 ---------- */
+    .shift { margin-top: 40px; display: grid; grid-template-columns: 1fr auto 1fr; gap: 14px; align-items: stretch; max-width: 720px; }
+    .shift > div { border-radius: 16px; padding: 20px 22px; }
+    .shift .from { background: var(--paper-2); color: var(--ink-3); }
+    .shift .to { background: var(--card); box-shadow: 0 8px 24px -12px rgba(25,25,25,.15); border: 1px solid rgba(232,118,60,.35); }
+    .shift .k { font-size: 12px; font-weight: 700; margin-bottom: 4px; }
+    .shift .to .k { color: var(--accent); }
+    .shift p { font-size: 18px; font-weight: 700; letter-spacing: -0.03em; }
+    .shift .from p { text-decoration: line-through; text-decoration-color: rgba(25,25,25,.3); }
+    .shift .ar { display: grid; place-items: center; color: var(--accent); font-size: 20px; }
+    @media (max-width: 599px) { .shift { grid-template-columns: 1fr; } .shift .ar { transform: rotate(90deg); height: 20px; } }
+
+    .cards3 { margin-top: 56px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+    @media (max-width: 799px) { .cards3 { grid-template-columns: 1fr; } }
+    .ccard {
+      background: var(--card); border-radius: 20px; padding: 30px 28px 32px;
+      box-shadow: 0 1px 2px rgba(25,25,25,.04), 0 10px 28px -14px rgba(25,25,25,.14);
+    }
+    .ccard .n { font-size: 12px; font-weight: 700; color: var(--accent); letter-spacing: .1em; }
+    .ccard h3 { margin: 10px 0 14px; font-size: 26px; font-weight: 800; letter-spacing: -0.045em; }
+    .ccard .no { display: inline-block; font-size: 14px; font-weight: 700; color: var(--ink-3); text-decoration: line-through; text-decoration-color: rgba(232,118,60,.7); margin-bottom: 8px; }
+    .ccard p { color: var(--ink-2); font-size: 15.5px; }
+
+    .order { margin-top: 64px; display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    @media (max-width: 799px) { .order { grid-template-columns: 1fr; } }
+    .order .box { border-radius: 20px; padding: 28px 28px 30px; }
+    .order .box.bad { background: var(--paper-2); }
+    .order .box.good { background: var(--night); color: var(--cream); }
+    .order .k { font-size: 13px; font-weight: 700; margin-bottom: 16px; }
+    .order .bad .k { color: var(--ink-3); }
+    .order .good .k { color: var(--accent-soft); }
+    .steps { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
+    .steps span.s { font-size: 14px; font-weight: 700; padding: 8px 13px; border-radius: 10px; }
+    .bad .steps span.s { background: var(--card); color: var(--ink-3); }
+    .bad .steps span.s.first { color: var(--ink); border: 1px dashed rgba(25,25,25,.3); }
+    .good .steps span.s { background: rgba(240,237,230,.08); color: var(--cream); }
+    .good .steps span.s.core { background: var(--accent); color: #fff; }
+    .steps i { font-style: normal; font-size: 12px; opacity: .5; }
+    .order .note { margin-top: 16px; font-size: 14.5px; }
+    .order .bad .note { color: var(--ink-2); }
+    .order .good .note { color: var(--cream-2); }
+
+    .closing { margin-top: 56px; font-size: clamp(20px, 2.6vw, 26px); line-height: 1.55; letter-spacing: -0.035em; color: var(--ink-2); font-weight: 500; }
+    .closing strong { color: var(--ink); font-weight: 800; }
+
+    /* ---------- 4. 사례 ---------- */
+    .cases-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; }
+    .nav-arrows { display: flex; gap: 8px; flex-shrink: 0; }
+    .nav-arrows button {
+      width: 44px; height: 44px; border-radius: 10px; display: grid; place-items: center;
+      background: transparent; border: 1px solid rgba(240,237,230,.25); color: var(--cream);
+      transition: border-color .2s, opacity .2s;
+    }
+    .nav-arrows button:hover { border-color: var(--cream); }
+    .nav-arrows button:disabled { opacity: .3; cursor: default; }
+    @media (max-width: 767px) { .nav-arrows { display: none; } }
+
+    .rail {
+      margin-top: 44px; display: flex; gap: 16px; overflow-x: auto;
+      scroll-snap-type: x mandatory; scrollbar-width: none;
+      padding-bottom: 6px;
+      margin-left: calc(-1 * var(--gutter)); margin-right: calc(-1 * var(--gutter));
+      padding-left: var(--gutter); padding-right: var(--gutter);
+      scroll-padding-left: var(--gutter);
+    }
+    .rail::-webkit-scrollbar { display: none; }
+    .case {
+      flex: 0 0 min(440px, 86%); scroll-snap-align: start;
+      background: var(--night-2); border: 1px solid var(--line-d); border-radius: 22px;
+      padding: 30px 28px; display: flex; flex-direction: column;
+    }
+    .case .no { font-size: 13px; font-weight: 700; color: var(--accent); }
+    .case h3 { margin: 6px 0 14px; font-size: 24px; font-weight: 800; letter-spacing: -0.04em; color: var(--cream); }
+    .chips { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 22px; }
+    .chips span { font-size: 12px; font-weight: 700; padding: 4px 10px; border-radius: 999px; border: 1px solid var(--line-d); color: var(--cream-3); }
+    .chips span.on { border-color: rgba(232,118,60,.6); color: var(--accent-soft); background: rgba(232,118,60,.1); }
+    .case .k { font-size: 12px; font-weight: 700; color: var(--cream-3); margin-bottom: 4px; letter-spacing: .02em; }
+    .case .before { color: var(--cream-3); font-size: 15px; margin-bottom: 18px; }
+    .case .after { color: var(--cream); font-size: 15.5px; margin-bottom: 22px; }
+    .case .result {
+      margin-top: auto; padding: 18px 20px; border-radius: 14px;
+      background: rgba(232,118,60,.12); border: 1px solid rgba(232,118,60,.3);
+    }
+    .case .result .k { color: var(--accent-soft); }
+    .case .result p { color: var(--cream); font-weight: 800; font-size: 17px; line-height: 1.5; letter-spacing: -0.03em; }
+    .rail-hint { margin-top: 18px; font-size: 13px; color: var(--cream-3); }
+    @media (min-width: 768px) { .rail-hint { display: none; } }
+
+    /* ---------- 5. 진단 ---------- */
+    .checkpoints { margin-top: 28px; display: flex; flex-wrap: wrap; gap: 8px; }
+    .checkpoints span { font-size: 14px; font-weight: 600; padding: 8px 14px; border-radius: 999px; background: var(--card); border: 1px solid var(--line); color: var(--ink-2); }
+    .take { margin-top: 56px; }
+    .take .k { font-size: 15px; font-weight: 700; margin-bottom: 16px; }
+    .icons3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+    @media (max-width: 799px) { .icons3 { grid-template-columns: 1fr; } }
+    .icard { background: var(--card); border-radius: 20px; padding: 28px 26px; box-shadow: 0 1px 2px rgba(25,25,25,.04), 0 10px 28px -14px rgba(25,25,25,.14); }
+    @media (max-width: 799px) { .icard { display: grid; grid-template-columns: 52px 1fr; column-gap: 16px; align-items: center; padding: 22px; } .icard .ic { grid-row: span 2; margin: 0 !important; } }
+    .icard .ic { width: 52px; height: 52px; border-radius: 14px; background: var(--accent-tint); color: var(--accent); display: grid; place-items: center; margin-bottom: 18px; }
+    .icard h3 { margin: 0 0 4px; font-size: 20px; font-weight: 800; letter-spacing: -0.04em; }
+    .icard p { color: var(--ink-2); font-size: 15px; }
+    .pick { margin-top: 28px; display: flex; align-items: center; gap: 10px; font-size: 15px; color: var(--ink-2); padding: 16px 20px; border-radius: 14px; background: var(--paper-2); }
+    .pick svg { color: var(--accent); flex-shrink: 0; }
+
+    /* ---------- 6. 신청하지 마세요 ---------- */
+    .nots { margin-top: 48px; display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    @media (max-width: 767px) { .nots { grid-template-columns: 1fr; } }
+    .not { display: grid; grid-template-columns: 28px 1fr; gap: 14px; padding: 24px 24px 26px; border-radius: 18px; background: var(--night-2); border: 1px solid var(--line-d); }
+    .not .x { width: 28px; height: 28px; border-radius: 50%; display: grid; place-items: center; background: rgba(232,118,60,.14); color: var(--accent); margin-top: 1px; }
+    .not h3 { margin: 0 0 6px; font-size: 17.5px; font-weight: 700; letter-spacing: -0.03em; color: var(--cream); line-height: 1.5; }
+    .not p { color: var(--cream-2); font-size: 15px; }
+
+    /* ---------- 7. 셀프 진단 ---------- */
+    .self-grid { display: grid; grid-template-columns: 1fr 1.05fr; gap: 56px; align-items: center; }
+    @media (max-width: 899px) { .self-grid { grid-template-columns: 1fr; gap: 40px; } }
+    .self-grid .btn { margin-top: 36px; }
+    .sheet { background: var(--card); border-radius: 22px; padding: 24px; box-shadow: 0 1px 2px rgba(25,25,25,.04), 0 20px 48px -20px rgba(25,25,25,.22); }
+    .sheet-top { display: flex; justify-content: space-between; align-items: center; font-size: 13px; color: var(--ink-3); padding: 0 4px 16px; border-bottom: 1px solid var(--line); margin-bottom: 8px; }
+    .sheet-top b { color: var(--ink); font-size: 15px; }
+    .q { display: grid; grid-template-columns: 1fr auto; gap: 14px; align-items: center; padding: 16px 4px; border-bottom: 1px solid var(--line); }
+    .q p { font-size: 15.5px; font-weight: 600; line-height: 1.5; }
+    .q .num { color: var(--accent); font-weight: 800; margin-right: 6px; }
+    .yn { display: flex; gap: 6px; }
+    .yn button { height: 34px; padding: 0 12px; border-radius: 8px; border: 1px solid rgba(25,25,25,.14); background: #fff; font-size: 13.5px; font-weight: 700; color: var(--ink-2); transition: all .15s; }
+    .yn button:hover { border-color: var(--ink); }
+    .yn button[aria-pressed="true"].y { background: var(--ink); border-color: var(--ink); color: #fff; }
+    .yn button[aria-pressed="true"].n { background: var(--accent); border-color: var(--accent); color: #fff; }
+    .q .bar { display: inline-block; height: 12px; border-radius: 6px; background: rgba(25,25,25,.14); vertical-align: middle; }
+    .q.ghost { filter: blur(3px); opacity: .55; pointer-events: none; user-select: none; }
+    .q.ghost:last-of-type { opacity: .3; border-bottom: 0; }
+    .sheet-foot { text-align: center; font-size: 13px; color: var(--ink-3); padding-top: 14px; }
+    @media (max-width: 480px) { .q { grid-template-columns: 1fr; gap: 10px; } .sheet { padding: 18px; } }
+
+    /* ---------- 8. 마지막 ---------- */
+    .final { text-align: center; padding: 136px 0 120px; overflow: hidden; }
+    .final::before {
+      content: ""; position: absolute; inset: 0;
+      background: radial-gradient(ellipse 60% 55% at 50% 45%, rgba(232,118,60,.16), transparent 70%);
+    }
+    .final .wrap { position: relative; }
+    .final .label { justify-content: center; }
+    .final p.q1 { font-size: clamp(22px, 3vw, 30px); color: var(--cream-2); font-weight: 500; letter-spacing: -0.04em; }
+    .final p.q2 { margin-top: 6px; font-size: clamp(34px, 5.6vw, 56px); font-weight: 800; letter-spacing: -0.05em; line-height: 1.25; color: var(--cream); }
+    .final .btn { margin-top: 48px; height: 60px; padding: 0 36px; font-size: 17px; }
+
+    /* ---------- Footer ---------- */
+    .ftr { background: var(--night); color: var(--cream-3); border-top: 1px solid var(--line-d); padding: 40px 0 120px; font-size: 13px; line-height: 1.8; }
+    .ftr .logo { font-size: 18px; display: inline-block; margin-bottom: 10px; }
+    .ftr a:hover { color: var(--cream); }
+    @media (min-width: 768px) { .ftr { padding-bottom: 48px; } }
+
+    /* ---------- Mobile sticky CTA ---------- */
+    .sticky {
+      position: fixed; left: 0; right: 0; bottom: 0; z-index: 35;
+      padding: 12px var(--gutter) calc(12px + env(safe-area-inset-bottom));
+      background: linear-gradient(180deg, rgba(27,26,23,0), rgba(27,26,23,.92) 35%);
+      transform: translateY(110%); transition: transform .3s ease;
+    }
+    .sticky.show { transform: none; }
+    .sticky .btn { width: 100%; }
+    @media (min-width: 768px) { .sticky { display: none; } }
+
+    /* ---------- Reveal ---------- */
+    .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
+    .reveal.in { opacity: 1; transform: none; }
     @media (prefers-reduced-motion: reduce) {
-      .check-pulse, .btn-glow, .arrow-pulse, .title-shine,
-      .reveal.is-visible .gauge-fill-full,
-      .reveal.is-visible .gauge-fill-half,
-      .reveal.is-visible .word-stagger > * { animation: none !important; }
-      .gauge-fill-full { width: 100%; background: rgba(255,255,255,0.85); }
-      .gauge-fill-half { width: 35%; background: rgba(255,232,224,0.85); }
+      html { scroll-behavior: auto; }
+      .reveal { opacity: 1; transform: none; transition: none; }
     }
+
+    /* ---------- Modal ---------- */
+    .modal { position: fixed; inset: 0; z-index: 60; display: none; align-items: center; justify-content: center; padding: 16px; }
+    .modal.open { display: flex; }
+    .modal .bd { position: absolute; inset: 0; background: rgba(15,14,12,.72); backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px); }
+    .modal .panel { position: relative; width: 100%; max-width: 480px; max-height: 92vh; overflow-y: auto; background: var(--paper); color: var(--ink); border-radius: 22px; box-shadow: 0 30px 80px -20px rgba(0,0,0,.5); }
+    .modal .x { position: absolute; top: 14px; right: 14px; width: 38px; height: 38px; border-radius: 50%; border: 0; background: transparent; display: grid; place-items: center; color: var(--ink-2); }
+    .modal .x:hover { background: rgba(25,25,25,.06); }
+    .modal .head { padding: 32px 28px 4px; }
+    .modal .head .label { margin-bottom: 12px; }
+    .modal h3 { margin: 0; font-size: 24px; font-weight: 800; letter-spacing: -0.04em; }
+    .modal .head p { margin-top: 8px; font-size: 15px; color: var(--ink-2); }
+    .modal form { padding: 20px 28px 28px; display: grid; gap: 18px; }
+    .field-label { display: block; font-size: 14px; font-weight: 700; margin-bottom: 8px; }
+    .field-label span { color: var(--accent-deep); }
+    .field-input { width: 100%; height: 52px; padding: 0 16px; border-radius: 12px; border: 1px solid rgba(25,25,25,.14); background: #fff; font: inherit; font-size: 16px; color: var(--ink); transition: border-color .15s, box-shadow .15s; }
+    .field-input:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(232,118,60,.18); }
+    .field-input.field-error { border-color: #D93025; box-shadow: 0 0 0 3px rgba(217,48,37,.12); }
+    .help { margin-top: 6px; font-size: 12.5px; color: var(--ink-3); }
+    .agree { border-radius: 14px; background: #fff; border: 1px solid var(--line); padding: 14px 16px; }
+    .agree label { display: flex; gap: 10px; align-items: flex-start; font-size: 14px; color: var(--ink-2); line-height: 1.55; cursor: pointer; }
+    .agree input { width: 18px; height: 18px; margin-top: 2px; accent-color: var(--accent); flex-shrink: 0; }
+    .agree .req { font-weight: 700; color: var(--accent-deep); }
+    .agree .tg { background: none; border: 0; padding: 0; margin-left: 4px; text-decoration: underline; text-underline-offset: 2px; color: var(--ink); font-size: 14px; }
+    .privacy { display: none; margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--line); font-size: 12.5px; color: var(--ink-2); line-height: 1.7; }
+    .privacy.open { display: block; }
+    .modal form .btn { width: 100%; margin-top: 4px; }
+    .modal form .btn:disabled { opacity: .6; cursor: default; transform: none; }
+
+    :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
   </style>
 </head>
+<body>
 
-<body class="antialiased">
-
-<!-- 스크롤 진행 막대 -->
-<div id="scroll-progress" class="scroll-progress" aria-hidden="true"></div>
-
-<!--
-  ============================================================
-  랜딩페이지 — 정책자금 진단 프로그램 무료 신청
-  케일럽 랠스턴 7단계: Hook → Gap → Story → Core Truth → Proof → Offer → CTA
-  ------------------------------------------------------------
-   SECTION 1. HEADLINE (Hero) — reframe punchline 상단 배치
-   SECTION 2. THE GAP        — '왜 이 진실이 묻혀 있었나'
-   SECTION 3. STORY          — 창업자 신원 카드 추가
-   SECTION 4. CORE TRUTH
-   SECTION 5. PROOF (+ CTA②) — 시스템 처방 라벨 + 업종 태그
-   SECTION 6. OFFER
-   SECTION 7. FINAL CTA (CTA③)
-   MODAL: 신청 폼 + 신청 후 진행 흐름
-  ============================================================
-
-  TODO (사용자 확인 필요):
-   1. SECTION 3 창업자 카드: [대표자 성함] / [대표 직함·소속] 부분 실제 정보로 교체
-   2. MODAL '신청 후 진행' 3-step: 실제 운영 프로세스에 맞춰 문구 검토
--->
-
-<!-- ========== SECTION 1. HEADLINE (Hero) ========== -->
-<section id="hero" class="relative gradient-hero">
-  <div class="max-w-content mx-auto px-5 sm:px-8 pt-16 md:pt-24 pb-20 md:pb-28">
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-start">
-
-      <!-- LEFT: 메시지 + CTA -->
-      <div class="reveal lg:col-span-7">
-        <span class="inline-block text-xs md:text-sm font-semibold tracking-widest text-navy/80 uppercase mb-6">
-          정책자금 구조 개선 컨설팅
-        </span>
-
-        <div class="word-stagger">
-          <p class="text-sm md:text-base font-semibold text-navy/80 tracking-wider mb-5">
-            같은 매출, 같은 업종 — 왜 우리만 거절일까요?
-          </p>
-          <h1 class="h-hero font-extrabold text-ink leading-[1.05]">
-            정부기관은<br/>
-            서류만 보지 않습니다.
-          </h1>
-          <p class="mt-5 h-hero font-extrabold text-navy leading-[1.05]">
-            회사를 봅니다.
-          </p>
-          <p class="mt-8 text-lg md:text-xl text-ink/80 leading-relaxed">
-            서류 다듬는 컨설팅으론 안 됩니다.<br/>
-            <span class="font-bold text-ink">회사의 사업 구조 자체를 바꿔야 합니다.</span>
-          </p>
-        </div>
-
-        <!-- 신뢰 지표 -->
-        <div class="mt-10 grid grid-cols-3 gap-3 sm:gap-4 max-w-md">
-          <div class="rounded-3xl bg-paper border border-ink/[0.06] px-3 py-5 text-center shadow-soft">
-            <p class="text-2xl md:text-3xl font-extrabold text-navy"><span class="counter" data-target="200">0</span><span class="text-sm md:text-base align-top ml-0.5">개</span></p>
-            <p class="mt-1.5 text-xs md:text-sm text-ink/65 leading-tight">연간 컨설팅<br/>중소기업</p>
-          </div>
-          <div class="rounded-3xl bg-paper border border-ink/[0.06] px-3 py-5 text-center shadow-soft">
-            <p class="text-2xl md:text-3xl font-extrabold text-navy"><span class="counter" data-target="500">0</span><span class="text-sm md:text-base align-top ml-0.5">억</span></p>
-            <p class="mt-1.5 text-xs md:text-sm text-ink/65 leading-tight">누적 자금<br/>흐름 설계</p>
-          </div>
-          <div class="rounded-3xl bg-paper border border-ink/[0.06] px-3 py-5 text-center shadow-soft">
-            <p class="text-2xl md:text-3xl font-extrabold text-navy">24h</p>
-            <p class="mt-1.5 text-xs md:text-sm text-ink/65 leading-tight">신청 후<br/>담당자 연락</p>
-          </div>
-        </div>
-
-        <div class="mt-10">
-          <button type="button" data-open-modal
-            class="btn-cta btn-glow inline-flex items-center justify-center bg-navy hover:bg-navy-deep text-white font-bold text-base md:text-lg rounded-full px-8 py-4 md:px-10 md:py-5 shadow-cta hover:shadow-cta-hover">
-            <span>▶  무료 상담 신청하기</span>
-          </button>
-        </div>
-      </div>
-
-      <!-- RIGHT: 현재 / 구조 개선 후 미리보기 -->
-      <div class="reveal lg:col-span-5 lg:sticky lg:top-8">
-        <div class="rounded-4xl gradient-aurora p-5 md:p-7 border border-ink/[0.06] shadow-soft">
-
-          <!-- 현재 카드 -->
-          <div class="rounded-3xl bg-white border border-ink/10 p-5 md:p-6">
-            <div class="flex items-center gap-2 mb-4">
-              <span class="text-[10px] font-bold text-ink/55 tracking-widest bg-ink/[0.06] rounded-full px-2.5 py-1">현재</span>
-              <span class="text-xs text-ink/55">정책자금 신청 결과</span>
-            </div>
-            <div class="space-y-3">
-              <div class="flex items-center justify-between text-sm">
-                <span class="text-ink/65">받을 수 있는 자금</span>
-                <span class="text-ink/30 font-extrabold text-lg">?</span>
-              </div>
-              <div class="flex items-center justify-between text-sm">
-                <span class="text-ink/65">승인 가능성</span>
-                <span class="text-ink/30 font-extrabold text-lg">?</span>
-              </div>
-              <div class="flex items-center justify-between text-sm">
-                <span class="text-ink/65">사업 구조 정합성</span>
-                <span class="text-ink/30 font-extrabold text-lg">?</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- 화살표 -->
-          <div class="flex items-center justify-center gap-2 my-4" aria-hidden="true">
-            <span class="text-[10px] font-bold text-navy tracking-widest bg-white rounded-full px-3 py-1.5 shadow-soft">구조 개선</span>
-            <span class="text-navy text-lg arrow-pulse">↓</span>
-          </div>
-
-          <!-- 도입 후 카드 -->
-          <div class="relative rounded-3xl gradient-onboarding text-white p-5 md:p-6 shadow-cta overflow-hidden">
-            <div class="absolute -top-12 -right-12 w-32 h-32 rounded-full bg-white/[0.05]" aria-hidden="true"></div>
-            <div class="relative flex items-center gap-2 mb-4">
-              <span class="text-[10px] font-bold text-white/85 tracking-widest bg-white/15 rounded-full px-2.5 py-1">도입 후</span>
-              <span class="text-xs text-white/70 inline-flex items-center gap-1">
-                <span class="check-pulse inline-flex w-3.5 h-3.5 rounded-full bg-mint/90 items-center justify-center text-navy text-[9px] font-extrabold">✓</span>
-                구조 분석 완료
-              </span>
-            </div>
-            <div class="relative space-y-4">
-              <div>
-                <p class="text-[10px] text-white/60 mb-1 tracking-wider">지금 받을 수 있는 자금</p>
-                <p class="text-2xl md:text-3xl font-extrabold leading-none">3,000<span class="text-base font-bold ml-1">만원</span></p>
-              </div>
-              <div class="h-px bg-white/15"></div>
-              <div>
-                <p class="text-[10px] text-white/60 mb-1 tracking-wider">구조 개선 후</p>
-                <div class="flex items-baseline gap-2">
-                  <p class="text-2xl md:text-3xl font-extrabold leading-none">4억 7,000<span class="text-base font-bold ml-1">만원</span></p>
-                  <p class="text-[10px] font-bold text-cream">+4억 4,000만 격차</p>
-                </div>
-              </div>
-            </div>
-
-            <!-- 4-Why 분석 게이지 (진입 시 채워지는 애니메이션) -->
-            <div class="relative mt-5 grid grid-cols-4 gap-1.5">
-              <div class="text-center">
-                <div class="gauge-bar"><div class="gauge-fill gauge-fill-full" style="--delay:0s"></div></div>
-                <p class="mt-1.5 text-[9px] text-white/55">상품</p>
-              </div>
-              <div class="text-center">
-                <div class="gauge-bar"><div class="gauge-fill gauge-fill-full" style="--delay:.15s"></div></div>
-                <p class="mt-1.5 text-[9px] text-white/55">목적</p>
-              </div>
-              <div class="text-center">
-                <div class="gauge-bar"><div class="gauge-fill gauge-fill-half" style="--delay:.3s"></div></div>
-                <p class="mt-1.5 text-[9px] text-white/55">시장</p>
-              </div>
-              <div class="text-center">
-                <div class="gauge-bar"><div class="gauge-fill gauge-fill-half" style="--delay:.45s"></div></div>
-                <p class="mt-1.5 text-[9px] text-white/55">방식</p>
-              </div>
-            </div>
-          </div>
-
-          <p class="mt-4 text-[11px] text-ink/50 leading-snug text-center">
-            * 구조 개선 후 변화 예시
-          </p>
-        </div>
-      </div>
-
-    </div>
+<!-- ========== HEADER ========== -->
+<header class="hdr">
+  <div class="wrap">
+    <a href="#top" class="logo" aria-label="OJO 홈">OJO<span>.</span></a>
+    <button type="button" class="btn btn--primary" data-open-modal>1:1 사업구조 진단</button>
   </div>
-  <div class="h-px w-full bg-gradient-to-r from-transparent via-navy/15 to-transparent"></div>
-</section>
+</header>
 
+<main id="top">
 
-<!-- ========== SECTION 2. THE GAP ========== -->
-<section id="gap" class="gradient-sunset">
-  <div class="max-w-content mx-auto px-5 sm:px-8 py-20 md:py-28">
-    <div class="reveal max-w-3xl mx-auto text-center">
-      <p class="text-base md:text-lg text-ink/70 mb-4">말씀드리기 조심스럽지만,</p>
-      <h2 class="h-section font-extrabold text-ink">
-        자금 컨설팅 시장에는<br/>
-        <span class="text-navy">큰 거짓말이 있습니다.</span>
-      </h2>
-
-      <div class="mt-12 md:mt-14 text-left md:text-center text-base md:text-lg text-ink/85 leading-relaxed space-y-5">
-        <p>
-          대부분의 컨설팅은<br/>
-          <span class="font-bold">인증 추가, 서류 다듬기</span> 같은<br class="sm:hidden"/>
-          표면적 변경만 도와주고,<br/>
-          매칭 수수료만 챙기고 떠납니다.
-        </p>
-        <p class="font-semibold text-ink">
-          그러나 진짜 문제는 따로 있습니다.
-        </p>
-      </div>
-
-      <!-- Reframe 박스 -->
-      <div class="relative mt-12 md:mt-14 rounded-2xl border-l-4 border-danger bg-white shadow-sm px-6 md:px-10 py-8 md:py-10 text-left overflow-hidden">
-        <span class="absolute top-0 right-4 md:right-6 text-[110px] md:text-[140px] text-danger/[0.08] font-serif leading-none select-none pointer-events-none" aria-hidden="true">“</span>
-        <p class="relative text-base md:text-lg text-ink/70">
-          서류와 인증을 아무리 다듬어도,
-        </p>
-        <p class="relative mt-3 text-xl md:text-2xl font-extrabold text-danger leading-snug">
-          사업 구조가 잡혀있지 않으면<br/>
-          결과는 같습니다.
-        </p>
-        <p class="relative mt-6 text-base md:text-lg text-ink/85">
-          기관은 회사의 <span class="font-bold">사업 구조</span>를 봅니다.<br/>
-          구조를 도입하지 않으면 매번 거절당합니다.
-        </p>
-      </div>
-
-      <div class="mt-12 md:mt-14">
-        <p class="text-2xl md:text-3xl font-extrabold text-navy">
-          당신 잘못이 아닙니다.
-        </p>
-        <p class="mt-3 text-base md:text-lg text-ink/70">
-          아무도 이걸 알려주지 않았을 뿐입니다.
-        </p>
-      </div>
+<!-- ========== 0. HERO ========== -->
+<section class="hero" id="hero">
+  <div class="glow" style="left:72%; top:22%"></div>
+  <div class="glow" style="left:84%; top:52%"></div>
+  <div class="glow" style="left:62%; top:70%; opacity:.05"></div>
+  <div class="wrap">
+    <div class="label reveal">OJO <span class="sub">/ 1:1 사업구조 진단</span></div>
+    <p class="eyebrow reveal">고객에게 팔리고, 대표에게 남는 사업구조</p>
+    <h1 class="h1 reveal">
+      돈도 시간도<br class="br-m" /> 남지 않는 노력은,<br />
+      <em>성장이 아니라 소모</em>입니다.
+    </h1>
+    <div class="ctas reveal">
+      <button type="button" class="btn btn--primary" data-open-modal>1:1 사업구조 진단 <span class="arrow">→</span></button>
+      <a href="#self-test" class="btn btn--ghost">셀프 진단 테스트</a>
     </div>
   </div>
 </section>
 
+<!-- ========== 1. 원했던 삶 → 소모 ========== -->
+<section class="sec sec--light" id="life">
+  <div class="wrap">
+    <div class="label reveal">The life you wanted</div>
+    <h2 class="h2 reveal">대표님이 원했던 건,<br />이런 삶 아니었나요?</h2>
 
-<!-- ========== SECTION 3. STORY ========== -->
-<section id="story" class="bg-white">
-  <div class="max-w-content mx-auto px-5 sm:px-8 py-20 md:py-28">
-    <div class="reveal max-w-3xl mx-auto">
-
-      <h2 class="h-section font-extrabold text-ink text-center">
-        사실 저도 그 안에 있었습니다.
-      </h2>
-
-      <div class="mt-12 text-base md:text-lg text-ink/85 leading-relaxed space-y-5">
-        <p>
-          자금 컨설팅으로 시작해서<br/>
-          <span class="font-bold text-navy">500억 넘게</span> 자금을 받아줬습니다.
-        </p>
-        <p>처음엔 뿌듯했죠.</p>
-        <p>
-          그런데 몇 달 뒤,<br/>
-          같은 회사가 또 찾아왔습니다.<br/>
-          <span class="italic text-ink/70">“돈이 또 필요합니다.”</span>
-        </p>
-        <p class="font-semibold">그때 깨달았습니다.</p>
+    <div class="pairs">
+      <div class="pair reveal">
+        <div class="want"><span class="tag">원했던 것</span><p>언제 일하고 언제 쉴지, 내가 정하는 삶</p></div>
+        <div class="vs" aria-hidden="true"><span>→</span></div>
+        <div class="now"><span class="tag">지금</span><p>밤에도 주말에도 휴대폰이 울립니다</p></div>
       </div>
-
-      <!-- 연료 vs 엔진 -->
-      <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-5">
-        <div class="case-card rounded-3xl bg-paper border border-ink/[0.06] px-6 py-7 shadow-soft">
-          <div class="text-3xl mb-3" aria-hidden="true">⛽</div>
-          <p class="text-sm font-semibold text-ink/60 mb-2">제가 한 일</p>
-          <p class="text-lg md:text-xl font-extrabold text-ink">‘연료를 부어주는 일’</p>
-          <p class="mt-3 text-sm md:text-base text-ink/70">연료는 떨어지면 또 사야 합니다.</p>
-        </div>
-        <div class="case-card rounded-3xl gradient-onboarding text-white px-6 py-7 shadow-cta">
-          <div class="text-3xl mb-3" aria-hidden="true">⚙️</div>
-          <p class="text-sm font-semibold text-white/70 mb-2">해야 했던 일</p>
-          <p class="text-lg md:text-xl font-extrabold">‘엔진을 다는 일’</p>
-          <p class="mt-3 text-sm md:text-base text-white/85">엔진은 한 번 달면 스스로 굴러갑니다.</p>
-        </div>
+      <div class="pair reveal">
+        <div class="want"><span class="tag">원했던 것</span><p>일한 만큼, 통장에도 쌓이는 삶</p></div>
+        <div class="vs" aria-hidden="true"><span>→</span></div>
+        <div class="now"><span class="tag">지금</span><p>매출은 늘었는데 통장은 그대로입니다</p></div>
       </div>
-
-      <div class="mt-12 text-base md:text-lg text-ink/85 leading-relaxed space-y-5 text-center">
-        <p>
-          정책자금도, 매출도,<br/>
-          <span class="font-bold text-navy">엔진만 제대로 달리면 알아서 따라옵니다.</span>
-        </p>
-        <p>
-          그래서 저는 이제 자금을 가져다 주지 않습니다.<br/>
-          대신 자금이 스스로 굴러오는<br/>
-          <span class="font-extrabold text-navy">‘성장 엔진’을 이식해 드립니다.</span>
-        </p>
+      <div class="pair reveal">
+        <div class="want"><span class="tag">원했던 것</span><p>잘하는 일을, 알아봐 주는 고객을 만나는 삶</p></div>
+        <div class="vs" aria-hidden="true"><span>→</span></div>
+        <div class="now"><span class="tag">지금</span><p>할인이나 서비스를 얹어줘야 계약이 됩니다</p></div>
       </div>
+    </div>
 
-      <!-- 구조 개선 — 서비스명 강조 -->
-      <div class="mt-12 md:mt-16 mx-auto max-w-2xl">
-        <div class="glow-pulse relative rounded-5xl gradient-onboarding text-white px-7 py-10 md:px-12 md:py-14 shadow-cta overflow-hidden">
-          <div class="absolute -top-16 -right-16 w-48 h-48 rounded-full bg-white/[0.04]" aria-hidden="true"></div>
-          <div class="absolute -bottom-20 -left-12 w-52 h-52 rounded-full bg-white/[0.04]" aria-hidden="true"></div>
-          <div class="relative text-center">
-            <p class="text-3xl md:text-5xl font-extrabold tracking-tight leading-tight">
-              구조 개선
-            </p>
-            <div class="mt-6 mx-auto w-14 h-0.5 bg-white/40"></div>
-            <p class="mt-6 text-sm md:text-base text-white/85 leading-relaxed">
-              회사의 <span class="font-bold text-white">사업 본질</span>과 <span class="font-bold text-white">시대의 흐름</span>을 맞춰<br/>
-              자금이 알아서 흘러오는 구조로 만들어드립니다.
-            </p>
-          </div>
-        </div>
-      </div>
+    <div class="story reveal">
+      <p>그래서 더 했습니다.</p>
+      <div class="more-row"><span>더 받고</span><span>더 해주고</span><span>사람을 더 뽑고</span><span>광고를 더 했습니다</span></div>
+      <p><strong>그런데 하루도, 통장도 그대로였습니다.</strong></p>
+    </div>
+
+    <div class="callout reveal">
+      <p>맡겨도, 배워도, 사람을 써도, 버텨도 그대로였다면,<br class="br-d" />
+      <strong><em>바꿔야 할 건 방법이 아닐 수</em> 있습니다.</strong></p>
     </div>
   </div>
 </section>
 
+<!-- ========== 2. 원인 ========== -->
+<section class="sec sec--dark" id="cause">
+  <div class="wrap">
+    <div class="label reveal">Why</div>
+    <h2 class="h2 reveal">왜 노력이,<br />소모가 될까요?</h2>
 
-<!-- ========== SECTION 4. CORE TRUTH (3-STEP 재구성) ========== -->
-<section id="core-truth" class="gradient-aurora">
-  <div class="max-w-content mx-auto px-5 sm:px-8 py-20 md:py-28">
-    <div class="reveal max-w-5xl mx-auto">
+    <div class="cause-key reveal">
+      <div class="k">원인은 하나입니다</div>
+      <p>고객 눈에, 대표님 제안이 다른 곳과 똑같아 보이기 때문입니다.</p>
+    </div>
 
-      <!-- 섹션 헤딩 -->
-      <h2 class="h-section font-extrabold text-ink text-center">
-        “왜 우리만 안 될까?”<br/>
-        <span class="text-navy">답은 여기 있습니다.</span>
-      </h2>
-      <p class="mt-5 text-center text-base md:text-lg text-ink/65 max-w-2xl mx-auto leading-relaxed">
-        정부가 돈을 푸는 진짜 이유 → 좋아하는 회사 → 그 회사가 되는 법.<br class="hidden sm:inline"/>
-        순서대로 따라가면 답이 보입니다.
-      </p>
-
-      <!-- ============================ -->
-      <!-- STEP 1: 정부가 돈 푸는 이유 -->
-      <!-- ============================ -->
-      <div class="mt-16 md:mt-24">
-        <div class="text-center mb-4">
-          <h3 class="text-xl md:text-3xl font-extrabold text-ink">정부는 왜 돈을 풀까요?</h3>
-        </div>
-        <p class="text-center text-base md:text-lg text-ink/70 max-w-2xl mx-auto leading-relaxed mb-10">
-          정부도 결국 <span class="font-bold text-navy">투자자</span>입니다.<br class="sm:hidden"/>
-          본인이 원하는 결과를 만들어줄 회사에만 돈을 줍니다.
-        </p>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5 max-w-2xl mx-auto">
-          <div class="rounded-3xl bg-navy text-white px-6 py-7 md:px-8 md:py-9 text-center shadow-cta">
-            <p class="text-[10px] md:text-xs font-bold text-white/70 tracking-widest mb-2">정부가 원하는 것 ①</p>
-            <p class="text-xl md:text-2xl font-extrabold mb-2">일자리 창출</p>
-            <p class="text-xs md:text-sm text-white/80 leading-snug">고용을 늘릴 수 있는 회사</p>
-          </div>
-          <div class="rounded-3xl bg-navy text-white px-6 py-7 md:px-8 md:py-9 text-center shadow-cta">
-            <p class="text-[10px] md:text-xs font-bold text-white/70 tracking-widest mb-2">정부가 원하는 것 ②</p>
-            <p class="text-xl md:text-2xl font-extrabold mb-2">세수 증대</p>
-            <p class="text-xs md:text-sm text-white/80 leading-snug">세금을 더 낼 수 있는 회사</p>
-          </div>
-        </div>
-
-        <div class="mt-8 mx-auto max-w-2xl rounded-2xl bg-white/70 border border-ink/[0.06] px-5 py-4 md:px-7 md:py-5">
-          <p class="text-center text-sm md:text-base text-ink/80 leading-relaxed">
-            결국 <span class="font-bold text-navy">"우리가 일자리·세수를 만들어줄 회사"</span>라는 걸 보여줘야 자금이 나옵니다.
-          </p>
-        </div>
+    <div class="loop-wrap">
+      <div class="loop reveal" aria-label="악순환 고리: 똑같아 보인다, 비교한다, 가격만 남는다, 깎아주고 더 해준다, 남는 돈이 준다, 고객을 더 받는다, 더 바빠진다">
+        <svg class="ring" viewBox="0 0 400 400" aria-hidden="true">
+          <circle cx="200" cy="200" r="148" fill="none" stroke="rgba(232,118,60,.35)" stroke-width="1.5" stroke-dasharray="3 5" />
+          <path d="M-5 -6 L5 0 L-5 6" fill="none" stroke="#E8763C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" transform="translate(264.2 66.7) rotate(25.7)" />
+          <path d="M-5 -6 L5 0 L-5 6" fill="none" stroke="#E8763C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" transform="translate(344.3 167.1) rotate(77.1)" />
+          <path d="M-5 -6 L5 0 L-5 6" fill="none" stroke="#E8763C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" transform="translate(315.7 292.3) rotate(128.6)" />
+          <path d="M-5 -6 L5 0 L-5 6" fill="none" stroke="#E8763C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" transform="translate(200.0 348.0) rotate(180.0)" />
+          <path d="M-5 -6 L5 0 L-5 6" fill="none" stroke="#E8763C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" transform="translate(84.3 292.3) rotate(231.4)" />
+          <path d="M-5 -6 L5 0 L-5 6" fill="none" stroke="#E8763C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" transform="translate(55.7 167.1) rotate(282.9)" />
+          <path d="M-5 -6 L5 0 L-5 6" fill="none" stroke="#E8763C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" transform="translate(135.8 66.7) rotate(334.3)" />
+        </svg>
+        <!-- 7 nodes on circle r=37% around center -->
+        <div class="node hot" style="left:50%; top:13%">똑같아 보인다</div>
+        <div class="node" style="left:79%; top:27%">비교한다</div>
+        <div class="node" style="left:86%; top:58%">가격만 남는다</div>
+        <div class="node" style="left:66%; top:84%">깎아주고<br />더 해준다</div>
+        <div class="node" style="left:34%; top:84%">남는 돈이 준다</div>
+        <div class="node" style="left:14%; top:58%">고객을<br />더 받는다</div>
+        <div class="node" style="left:21%; top:27%">더 바빠진다</div>
+        <div class="center">일은 늘고<b>남는 건 줄고</b></div>
       </div>
 
-      <!-- 단계 연결 화살표 -->
-      <div class="flex justify-center my-12 md:my-14" aria-hidden="true">
-        <span class="text-3xl text-navy/40 arrow-pulse">↓</span>
+      <div class="loop-text reveal">
+        <p>똑같아 보이면 고객은 비교하고, 비교하면 <strong>가격만 남습니다.</strong></p>
+        <p>놓치기 싫어 깎아주고 더 해주니, 일은 느는데 남는 돈은 줄어듭니다. 남는 게 없으니 고객을 더 받고, 그렇게 더 바빠집니다.</p>
+        <div class="side-notes">
+          <div class="side-note">
+            <div class="k">사람을 뽑아도</div>
+            <p>어디까지 해줄지 정해진 게 없으니, 결정은 대표님에게 몰립니다.</p>
+          </div>
+          <div class="side-note">
+            <div class="k">광고를 늘려도</div>
+            <p>똑같아 보이는 곳을, 더 많은 사람에게 보여줄 뿐입니다.</p>
+          </div>
+        </div>
       </div>
+    </div>
 
-      <!-- ============================ -->
-      <!-- STEP 2: 정부가 미는 회사 -->
-      <!-- ============================ -->
+    <div class="busy reveal">
+      <p>바쁜 건 잘되고 있다는 신호가 아닙니다.</p>
+      <p><strong>똑같아 보이는 제안을, 대표님이 몸과 시간으로 메우고 있다는 신호입니다.</strong></p>
+    </div>
+
+    <p class="big-quote reveal">
+      바빠서 못 바꾸는 게 아니라,<br />
+      <strong><span class="hl">안 바꿔서 바쁜 거예요.</span></strong>
+    </p>
+  </div>
+</section>
+
+<!-- ========== 3. 해결 ========== -->
+<section class="sec sec--light" id="solution">
+  <div class="wrap">
+    <div class="label reveal">Solution</div>
+    <h2 class="h2 reveal">그래서 바꿔야 하는 건,<br /><em>일이 아니라 제안</em>입니다.</h2>
+
+    <p class="lead reveal">제안은 고객이 돈을 내기 전에 마주하는 것 전부입니다. <strong>누구에게, 무엇을, 얼마에</strong> 파는지.</p>
+    <p class="lead reveal">같은 일을 해도 제안이 다르면, 고객 눈에는 비교할 곳이 없어집니다.</p>
+
+    <div class="shift reveal">
+      <div class="from"><div class="k">지금 고객의 고민</div><p>여기냐, 저기냐</p></div>
+      <div class="ar" aria-hidden="true">→</div>
+      <div class="to"><div class="k">제안을 바꾸면</div><p>할 거냐, 말 거냐</p></div>
+    </div>
+
+    <div class="cards3">
+      <div class="ccard reveal">
+        <div class="n">01</div>
+        <h3>누구에게</h3>
+        <span class="no">다 받지 않습니다</span>
+        <p>이미 그 문제에 돈을 쓰고, 대표님의 가치를 아는 고객을 고릅니다.</p>
+      </div>
+      <div class="ccard reveal">
+        <div class="n">02</div>
+        <h3>무엇을</h3>
+        <span class="no">더 얹지 않습니다</span>
+        <p>고객이 결과를 얻기까지 기다리는 시간과 직접 해야 할 수고를 덜어줍니다.</p>
+      </div>
+      <div class="ccard reveal">
+        <div class="n">03</div>
+        <h3>얼마에</h3>
+        <span class="no">옆집을 보고 정하지 않습니다</span>
+        <p>고객이 얻는 결과로 값을 매깁니다.</p>
+      </div>
+    </div>
+
+    <div class="order">
+      <div class="box bad reveal">
+        <div class="k">대부분은 이 순서가 거꾸로였습니다</div>
+        <div class="steps">
+          <span class="s first">알리는 법부터</span><i>→</i><span class="s">제안은 그대로</span>
+        </div>
+        <p class="note">제안은 그대로 두고, 알리는 법부터 배우고 맡겼습니다.</p>
+      </div>
+      <div class="box good reveal">
+        <div class="k">순서대로 바꾸면</div>
+        <div class="steps">
+          <span class="s core">누구에게</span><i>→</i><span class="s core">무엇을</span><i>→</i><span class="s core">얼마에</span><i>→</i><span class="s">잇는다</span><i>→</i><span class="s">알린다</span>
+        </div>
+        <p class="note">그다음에 첫 구매를 다음 구매로 잇고, 가장 원할 사람에게 알립니다.</p>
+      </div>
+    </div>
+
+    <p class="closing reveal">
+      순서대로 바꾸면, 고객은 비교하지 않고 고릅니다.<br />
+      <strong>같은 일을 해도, <span class="hl">대표님에게 돈과 시간이 남습니다.</span></strong>
+    </p>
+  </div>
+</section>
+
+<!-- ========== 4. 사례 ========== -->
+<section class="sec sec--dark" id="cases">
+  <div class="wrap">
+    <div class="cases-head">
       <div>
-        <div class="text-center mb-4">
-          <h3 class="text-xl md:text-3xl font-extrabold text-ink">그래서 정부가 미는 회사는?</h3>
-        </div>
-        <p class="text-center text-base md:text-lg text-ink/70 max-w-2xl mx-auto leading-relaxed mb-10">
-          국가가 미는 <span class="font-bold text-navy">4가지 산업 흐름</span>이 있습니다.<br class="sm:hidden"/>
-          이 중 하나라도 올라탄 회사가 자금을 받습니다.
-        </p>
-
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 max-w-3xl mx-auto">
-          <div class="rounded-2xl bg-white border border-ink/10 p-5 md:p-6 text-center shadow-soft">
-            <p class="text-2xl md:text-3xl font-extrabold text-navy mb-1">ESG</p>
-            <p class="text-[11px] md:text-xs text-ink/65 leading-snug">환경·사회·<br/>지배구조</p>
-          </div>
-          <div class="rounded-2xl bg-white border border-ink/10 p-5 md:p-6 text-center shadow-soft">
-            <p class="text-2xl md:text-3xl font-extrabold text-navy mb-1">AX</p>
-            <p class="text-[11px] md:text-xs text-ink/65 leading-snug">AI 전환</p>
-          </div>
-          <div class="rounded-2xl bg-white border border-ink/10 p-5 md:p-6 text-center shadow-soft">
-            <p class="text-2xl md:text-3xl font-extrabold text-navy mb-1">DX</p>
-            <p class="text-[11px] md:text-xs text-ink/65 leading-snug">디지털 전환</p>
-          </div>
-          <div class="rounded-2xl bg-white border border-ink/10 p-5 md:p-6 text-center shadow-soft">
-            <p class="text-2xl md:text-3xl font-extrabold text-navy mb-1">수출</p>
-            <p class="text-[11px] md:text-xs text-ink/65 leading-snug">글로벌 진출</p>
-          </div>
-        </div>
-
-        <div class="mt-8 mx-auto max-w-2xl rounded-2xl bg-white/70 border border-ink/[0.06] px-5 py-4 md:px-7 md:py-5">
-          <p class="text-center text-sm md:text-base text-ink/80 leading-relaxed">
-            네 가지 중 하나라도 회사 안에 살아있으면,<br class="sm:hidden"/>
-            <span class="font-bold text-navy">"정부가 밀어줄 회사"</span>가 됩니다.
-          </p>
-        </div>
+        <div class="label reveal">Cases</div>
+        <h2 class="h2 reveal">업종은 그대로,<br /><em>제안만</em> 바꿨습니다.</h2>
       </div>
-
-      <!-- 단계 연결 화살표 -->
-      <div class="flex justify-center my-12 md:my-14" aria-hidden="true">
-        <span class="text-3xl text-navy/40 arrow-pulse">↓</span>
-      </div>
-
-      <!-- ============================ -->
-      <!-- STEP 3: 4-Why 정렬 -->
-      <!-- ============================ -->
-      <div>
-        <div class="text-center mb-4">
-          <h3 class="text-xl md:text-3xl font-extrabold text-ink">그 흐름에 올라타려면?</h3>
-        </div>
-        <p class="text-center text-base md:text-lg text-ink/70 max-w-2xl mx-auto leading-relaxed mb-10">
-          그 흐름을 회사 안에 심으려면, <span class="font-bold text-navy">사업의 본질 네 가지</span>가<br class="sm:hidden"/>
-          먼저 명확해야 합니다.
-        </p>
-
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5">
-          <div class="case-card rounded-3xl bg-paper border border-ink/[0.06] p-6 md:p-7 shadow-soft">
-            <span class="text-navy/30 text-3xl md:text-4xl font-extrabold leading-none">01</span>
-            <p class="mt-4 text-lg md:text-xl font-extrabold text-ink">무엇을 파는가</p>
-            <p class="mt-2 text-xs md:text-sm text-ink/65 leading-snug">상품·서비스의 본질</p>
-          </div>
-          <div class="case-card rounded-3xl bg-paper border border-ink/[0.06] p-6 md:p-7 shadow-soft">
-            <span class="text-navy/30 text-3xl md:text-4xl font-extrabold leading-none">02</span>
-            <p class="mt-4 text-lg md:text-xl font-extrabold text-ink">왜 파는가</p>
-            <p class="mt-2 text-xs md:text-sm text-ink/65 leading-snug">회사가 존재하는 이유</p>
-          </div>
-          <div class="case-card rounded-3xl bg-paper border border-ink/[0.06] p-6 md:p-7 shadow-soft">
-            <span class="text-navy/30 text-3xl md:text-4xl font-extrabold leading-none">03</span>
-            <p class="mt-4 text-lg md:text-xl font-extrabold text-ink">어디에 파는가</p>
-            <p class="mt-2 text-xs md:text-sm text-ink/65 leading-snug">타깃 시장의 정의</p>
-          </div>
-          <div class="case-card rounded-3xl bg-paper border border-ink/[0.06] p-6 md:p-7 shadow-soft">
-            <span class="text-navy/30 text-3xl md:text-4xl font-extrabold leading-none">04</span>
-            <p class="mt-4 text-lg md:text-xl font-extrabold text-ink">어떻게 파는가</p>
-            <p class="mt-2 text-xs md:text-sm text-ink/65 leading-snug">전달 방식과 시스템</p>
-          </div>
-        </div>
-
-        <div class="mt-8 mx-auto max-w-2xl rounded-2xl bg-white/70 border border-ink/[0.06] px-5 py-4 md:px-7 md:py-5">
-          <p class="text-center text-sm md:text-base text-ink/80 leading-relaxed">
-            이 네 가지가 시대 흐름과 맞물리면,<br class="sm:hidden"/>
-            기관이 <span class="font-bold text-navy">"밀어줘야 할 회사"</span>라고 판단합니다.
-          </p>
-        </div>
-      </div>
-
-      <div class="mt-16 md:mt-20 mx-auto max-w-3xl rounded-3xl bg-navy text-white px-6 py-8 md:px-10 md:py-10 text-center shadow-cta">
-        <p class="text-xl md:text-3xl font-extrabold leading-snug">
-          회사를 정부가 좋아할 구조로 바꿔드립니다.<br/>
-          <span class="text-cream">이게 OJO 구조 개선입니다.</span>
-        </p>
-        <p class="mt-4 text-sm md:text-base text-white/80 leading-relaxed">
-          우리 회사가 지금 어디쯤 있는지, 상담받아 보세요.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ========== SECTION 6. OFFER — 숫자 두 개가 모든 걸 말합니다 ========== -->
-<section id="offer" class="gradient-sunset">
-  <div class="max-w-content mx-auto px-5 sm:px-8 py-20 md:py-28">
-    <div class="reveal max-w-5xl mx-auto">
-
-      <h2 class="h-section font-extrabold text-ink text-center">
-        숫자 두 개가,<br class="sm:hidden"/>
-        <span class="text-navy">모든 걸 말합니다.</span>
-      </h2>
-      <p class="mt-5 text-center text-base md:text-lg text-ink/65 max-w-2xl mx-auto leading-relaxed">
-        상담 한 번이면, 회사의 진짜 자금 가능성이 보입니다.
-      </p>
-
-      <!-- 두 개의 숫자 + 격차 시각화 -->
-      <div class="mt-12 grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] gap-4 md:gap-5 items-stretch">
-
-        <!-- 좌측: 현재 -->
-        <div class="rounded-3xl bg-white border border-ink/10 p-7 md:p-9 shadow-soft flex flex-col">
-          <p class="text-xs md:text-sm font-bold text-ink/55 tracking-widest">지금 받을 수 있는 자금</p>
-          <p class="mt-4 text-4xl md:text-5xl font-extrabold text-ink leading-none tracking-tight">
-            3,000<span class="text-xl md:text-2xl font-bold ml-1 text-ink/70">만원</span>
-          </p>
-          <p class="mt-auto pt-6 text-sm md:text-base text-ink/55 leading-snug">
-            회사 조건 그대로<br class="md:hidden"/>
-            신청 가능한 한도
-          </p>
-        </div>
-
-        <!-- 가운데: 격차 화살표 -->
-        <div class="flex md:flex-col items-center justify-center py-2 md:py-0 md:px-2 gap-3">
-          <div class="hidden md:flex flex-col items-center gap-2">
-            <div class="gap-arrow text-3xl md:text-4xl text-danger leading-none font-bold">→</div>
-            <div class="text-[10px] md:text-xs font-extrabold text-danger tracking-widest whitespace-nowrap">+4억 4,000만</div>
-          </div>
-          <div class="md:hidden flex items-center gap-2">
-            <div class="text-2xl text-danger leading-none">↓</div>
-            <div class="text-xs font-extrabold text-danger tracking-widest">+4억 4,000만</div>
-          </div>
-        </div>
-
-        <!-- 우측: 구조 개선 후 -->
-        <div class="relative rounded-3xl gradient-onboarding text-white p-7 md:p-9 shadow-cta flex flex-col overflow-hidden">
-          <div class="absolute -top-12 -right-12 w-32 h-32 rounded-full bg-white/[0.05]" aria-hidden="true"></div>
-          <p class="relative text-xs md:text-sm font-bold text-white/70 tracking-widest">구조 개선 후 받을 수 있는 자금</p>
-          <p class="relative mt-4 text-4xl md:text-5xl font-extrabold leading-none tracking-tight">
-            4억 7,000<span class="text-xl md:text-2xl font-bold ml-1 text-white/85">만원</span>
-          </p>
-          <p class="relative mt-auto pt-6 text-sm md:text-base text-white/65 leading-snug">
-            사업 구조를 손본 뒤<br class="md:hidden"/>
-            가능한 한도
-          </p>
-        </div>
-      </div>
-
-      <!-- 결론 강조 -->
-      <div class="mt-10 mx-auto max-w-2xl rounded-2xl bg-white/70 border-l-4 border-danger px-6 py-5 md:px-8 md:py-6">
-        <p class="text-base md:text-xl text-ink/90 leading-relaxed">
-          이 <span class="font-extrabold text-danger">4억 4,000만원</span>이,<br class="sm:hidden"/>
-          지금도 매월 사라지고 있는 자금입니다.
-        </p>
-      </div>
-
-      <p class="mt-4 text-center text-xs md:text-sm text-ink/50">
-        * 실제 상담 사례 평균 (회사 매출·업종에 따라 달라집니다)
-      </p>
-
-      <!-- 상담 시 함께 받게 되는 것 -->
-      <div class="mt-12 md:mt-14 mx-auto max-w-3xl rounded-3xl bg-white border border-ink/[0.06] px-6 py-7 md:px-9 md:py-8 shadow-soft">
-        <p class="text-sm md:text-base font-bold text-navy tracking-wider mb-5">상담 시 함께 받게 되는 것</p>
-        <ul class="space-y-3.5">
-          <li class="flex items-start gap-3 text-base md:text-lg text-ink/85 leading-snug">
-            <svg class="shrink-0 w-5 h-5 mt-1 text-navy" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-              <path fill-rule="evenodd" d="M16.704 5.296a1 1 0 0 1 0 1.408l-7.5 7.5a1 1 0 0 1-1.408 0l-3.5-3.5a1 1 0 1 1 1.408-1.408L8.5 12.092l6.796-6.796a1 1 0 0 1 1.408 0Z" clip-rule="evenodd"/>
-            </svg>
-            <span>우리 회사의 사업 본질과 시대 흐름 정합도 분석</span>
-          </li>
-          <li class="flex items-start gap-3 text-base md:text-lg text-ink/85 leading-snug">
-            <svg class="shrink-0 w-5 h-5 mt-1 text-navy" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-              <path fill-rule="evenodd" d="M16.704 5.296a1 1 0 0 1 0 1.408l-7.5 7.5a1 1 0 0 1-1.408 0l-3.5-3.5a1 1 0 1 1 1.408-1.408L8.5 12.092l6.796-6.796a1 1 0 0 1 1.408 0Z" clip-rule="evenodd"/>
-            </svg>
-            <span>가장 빠른 자금 확보 경로 안내</span>
-          </li>
-        </ul>
-      </div>
-
-      <p class="mt-12 text-center text-xl md:text-2xl font-extrabold text-ink leading-snug">
-        먼저 우리 회사가 얼마 받을 수 있는지부터<br class="sm:hidden"/>
-        확인해보세요.
-      </p>
-    </div>
-  </div>
-</section>
-
-
-<!-- ========== SECTION 6-B. FAQ ========== -->
-<section id="faq" class="bg-white">
-  <div class="max-w-content mx-auto px-5 sm:px-8 py-20 md:py-28">
-    <div class="reveal max-w-3xl mx-auto">
-
-      <h2 class="h-section font-extrabold text-ink text-center">
-        자주 묻는 질문
-      </h2>
-      <p class="mt-4 text-center text-sm md:text-base text-ink/60">
-        상담 신청 전 가장 많이 받는 질문
-      </p>
-
-      <div class="mt-12 md:mt-14 space-y-3 md:space-y-4">
-
-        <details class="faq-item group rounded-3xl bg-paper border border-ink/10 overflow-hidden">
-          <summary class="flex items-center justify-between gap-4 px-6 md:px-8 py-5 md:py-6 cursor-pointer list-none">
-            <p class="text-base md:text-lg font-bold text-ink">상담 비용이 발생하나요?</p>
-            <span class="faq-icon shrink-0 w-8 h-8 rounded-full bg-white border border-ink/10 flex items-center justify-center text-navy text-xl font-bold leading-none transition-transform">+</span>
-          </summary>
-          <div class="px-6 md:px-8 pb-6 md:pb-7 text-sm md:text-base text-ink/80 leading-relaxed">
-            <b>첫 상담은 무료입니다.</b> 상담 후 회사 상황을 검토해 구조 개선이 필요하다고 판단되면, 별도 자문료를 안내드립니다. 자금 매칭 수수료(자금 받아주는 대가)는 일절 받지 않습니다. 상담 후 결정은 전적으로 대표님 몫이며, 어떠한 결제 강요도 없습니다.
-          </div>
-        </details>
-
-        <details class="faq-item group rounded-3xl bg-paper border border-ink/10 overflow-hidden">
-          <summary class="flex items-center justify-between gap-4 px-6 md:px-8 py-5 md:py-6 cursor-pointer list-none">
-            <p class="text-base md:text-lg font-bold text-ink">상담은 어떤 방식으로 진행되나요?</p>
-            <span class="faq-icon shrink-0 w-8 h-8 rounded-full bg-white border border-ink/10 flex items-center justify-center text-navy text-xl font-bold leading-none transition-transform">+</span>
-          </summary>
-          <div class="px-6 md:px-8 pb-6 md:pb-7 text-sm md:text-base text-ink/80 leading-relaxed">
-            신청 후 24시간 내 담당자가 입력하신 연락처로 연락드려 상담 일정을 조율합니다. 누적 500억 규모의 자금 흐름 데이터를 바탕으로 회사의 사업 구조를 살펴보고, 어떤 부분을 손봐야 자금이 흘러올지 알려드립니다.
-          </div>
-        </details>
-
-        <details class="faq-item group rounded-3xl bg-paper border border-ink/10 overflow-hidden">
-          <summary class="flex items-center justify-between gap-4 px-6 md:px-8 py-5 md:py-6 cursor-pointer list-none">
-            <p class="text-base md:text-lg font-bold text-ink">구조 개선은 자금 받아주는 일인가요?</p>
-            <span class="faq-icon shrink-0 w-8 h-8 rounded-full bg-white border border-ink/10 flex items-center justify-center text-navy text-xl font-bold leading-none transition-transform">+</span>
-          </summary>
-          <div class="px-6 md:px-8 pb-6 md:pb-7 text-sm md:text-base text-ink/80 leading-relaxed">
-            아니요. 구조 개선은 자금 매칭 서비스가 아닙니다. 회사의 사업 본질(무엇을·왜·누구에게·어떻게 파는가)과 시대 흐름(ESG·AI·디지털·수출)을 맞춰, 자금이 자연스럽게 흘러오는 회사로 다시 만드는 작업입니다. 자금은 그 결과로 따라오는 것이지, 목적이 아닙니다.
-          </div>
-        </details>
-
-        <details class="faq-item group rounded-3xl bg-paper border border-ink/10 overflow-hidden">
-          <summary class="flex items-center justify-between gap-4 px-6 md:px-8 py-5 md:py-6 cursor-pointer list-none">
-            <p class="text-base md:text-lg font-bold text-ink">제 업종도 구조 개선이 의미가 있을까요?</p>
-            <span class="faq-icon shrink-0 w-8 h-8 rounded-full bg-white border border-ink/10 flex items-center justify-center text-navy text-xl font-bold leading-none transition-transform">+</span>
-          </summary>
-          <div class="px-6 md:px-8 pb-6 md:pb-7 text-sm md:text-base text-ink/80 leading-relaxed">
-            제조·도소매·서비스·IT·건설·농업 등 거의 모든 업종이 가능합니다. 1년 200개 중소기업을 직접 컨설팅한 노하우로 업종 특성에 맞춰 분석합니다. 상담 후 업종에 따라 의미가 약하다고 판단되면 그 사실도 솔직히 안내드립니다.
-          </div>
-        </details>
-
-
-
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- ========== SECTION 7. FINAL CTA ========== -->
-<section id="cta" class="gradient-cta text-white">
-  <div class="max-w-content mx-auto px-5 sm:px-8 py-20 md:py-28">
-    <div class="reveal max-w-3xl mx-auto text-center">
-      <h2 class="h-section font-extrabold leading-snug">
-        이 페이지를 끝까지 읽으셨다면,<br/>
-        이미 답을 알고 계실 겁니다.
-      </h2>
-
-      <div class="mt-10 text-base md:text-xl text-white/90 leading-relaxed space-y-4">
-        <p>
-          당신 회사는 받을 수 있습니다.<br/>
-          다만, <span class="font-bold">‘사업 구조’가 잡혀있지 않을 뿐</span>입니다.
-        </p>
-        <p>
-          상담을 통해 그 구조의 격차를 알 수 있습니다.<br/>
-          <span class="font-extrabold">지금 당장, 무료로 확인하세요.</span>
-        </p>
-      </div>
-
-      <div class="mt-12">
-        <button type="button" data-open-modal
-          class="btn-cta btn-glow inline-flex items-center justify-center bg-white text-navy font-extrabold text-lg md:text-2xl rounded-full px-10 py-5 md:px-14 md:py-6 shadow-cta hover:shadow-cta-hover">
-          <span>▶  무료 상담 신청하기</span>
+      <div class="nav-arrows reveal">
+        <button type="button" data-rail="prev" aria-label="이전 사례">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
+        </button>
+        <button type="button" data-rail="next" aria-label="다음 사례">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
         </button>
       </div>
+    </div>
 
+    <div class="rail reveal" id="rail">
+      <article class="case">
+        <div class="no">사례 01</div>
+        <h3>물리치료사</h3>
+        <div class="chips"><span class="on">누구에게</span><span class="on">무엇을</span><span class="on">얼마에</span><span class="on">잇는다</span></div>
+        <div class="k">전</div>
+        <p class="before">몸의 균형을 잡아주는 곳. 거북목, 굽은 등, 틀어진 골반까지 몸 전체를 다 보고 있었습니다.</p>
+        <div class="k">바꾼 제안</div>
+        <p class="after">무너짐이 대부분 발 아치에서 시작된다는 걸 짚고, 족저근막염 전문으로 좁혔습니다. 치료 다음엔 아치 교정 맞춤 신발로 이었습니다.</p>
+        <div class="result"><div class="k">결과</div><p>예약 3개월 치 마감,<br />객단가 6만 원 → 패키지 80만 원부터</p></div>
+      </article>
+
+      <article class="case">
+        <div class="no">사례 02</div>
+        <h3>종합광고대행사</h3>
+        <div class="chips"><span class="on">누구에게</span><span class="on">무엇을</span><span>얼마에</span><span>잇는다</span></div>
+        <div class="k">전</div>
+        <p class="before">광고라면 뭐든 하던 대행사. 광고주 눈엔 고를 이유가 가격뿐이었습니다.</p>
+        <div class="k">바꾼 제안</div>
+        <p class="after">매출의 7할을 내던 병의원만 남기고, 심의부터 예약 상담까지 환자가 찾아오기까지를 맡았습니다.</p>
+        <div class="result"><div class="k">결과</div><p>광고주는 3분의 1,<br />영업이익은 1년 만에 두 배</p></div>
+      </article>
+
+      <article class="case">
+        <div class="no">사례 03</div>
+        <h3>화장품 제조사</h3>
+        <div class="chips"><span class="on">누구에게</span><span class="on">무엇을</span><span>얼마에</span><span>잇는다</span></div>
+        <div class="k">전</div>
+        <p class="before">수십 개 피부 개선 화장품 중 하나. 다들 비슷한 성적서에, 비슷한 말이었습니다.</p>
+        <div class="k">바꾼 제안</div>
+        <p class="after">자극적인 관리를 할 수 없는 임산부로 좁히고, 상세페이지와 판매처, 구성을 다 그 사람에게 맞췄습니다. 제품은 그대로였습니다.</p>
+        <div class="result"><div class="k">결과</div><p>ROAS 200% → 800%</p></div>
+      </article>
+
+      <article class="case">
+        <div class="no">사례 04</div>
+        <h3>반찬가게</h3>
+        <div class="chips"><span class="on">누구에게</span><span class="on">무엇을</span><span class="on">얼마에</span><span class="on">잇는다</span></div>
+        <div class="k">전</div>
+        <p class="before">낱개로 진열해 팔고, 마감마다 떨이가 나오던 가게.</p>
+        <div class="k">바꾼 제안</div>
+        <p class="after">워킹맘에게 식단을 대신 짜서, 주문받은 만큼만 새벽에 만들어 집 앞에 놓았습니다. 묶음과 정기배달로 팔았습니다.</p>
+        <div class="result"><div class="k">결과</div><p>반찬 값은 낮췄는데, 버리는 반찬은 없어지고 고객 한 명이 쓰는 돈은 늘었습니다</p></div>
+      </article>
+    </div>
+    <p class="rail-hint">옆으로 넘겨 보세요 →</p>
+  </div>
+</section>
+
+<!-- ========== 5. 진단 ========== -->
+<section class="sec sec--light" id="diagnosis">
+  <div class="wrap">
+    <div class="label reveal">Diagnosis</div>
+    <h2 class="h2 reveal">대표님 사업은,<br />어디가 비어 있을까요?</h2>
+
+    <p class="lead reveal">사전 진단서를 먼저 꼼꼼히 읽고, <strong>1:1로 함께 봅니다.</strong></p>
+    <div class="checkpoints reveal">
+      <span>누구에게, 무엇을, 얼마에 팔고 있는지</span>
+      <span>첫 구매 뒤로 이어지는지</span>
+      <span>맞는 고객에게 닿고 있는지</span>
+    </div>
+
+    <div class="take">
+      <div class="k reveal">진단이 끝나면 세 가지를 들고 가십니다.</div>
+      <div class="icons3">
+        <div class="icard reveal">
+          <div class="ic" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="8.5" y="14" width="7" height="7" rx="1.5"/><path d="M6.5 10v2h11v-2M12 12v2"/></svg>
+          </div>
+          <h3>현재 구조</h3>
+          <p>지금 사업이 어떻게 이어져 있는지</p>
+        </div>
+        <div class="icard reveal">
+          <div class="ic" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5M11 8v3.5M11 14h.01"/></svg>
+          </div>
+          <h3>막힌 지점</h3>
+          <p>어디서 새고 있는지</p>
+        </div>
+        <div class="icard reveal">
+          <div class="ic" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </div>
+          <h3>다음 행동</h3>
+          <p>무엇부터 바꿀지</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="pick reveal">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 15l2 2 4-4"/></svg>
+      <span>진단할 분은 사전 진단서를 보고 직접 고릅니다.</span>
     </div>
   </div>
-
-  <footer class="border-t border-white/10">
-    <div class="max-w-content mx-auto px-5 sm:px-8 py-10 md:py-14 text-center">
-      <p class="text-xl md:text-2xl font-extrabold text-white">
-        OJO
-        <span class="mx-2 text-white/30 font-normal">|</span>
-        <span class="text-white/85">OJO Co., Ltd.</span>
-      </p>
-      <div class="mt-5 space-y-1.5 text-xs md:text-sm text-white/55">
-        <p>사업자등록번호: 338-08-02627</p>
-        <p>
-          대표전화: <a href="tel:1666-9287" class="text-white/70 hover:text-white">1666-9287</a>
-        </p>
-      </div>
-      <p class="mt-6 text-[11px] md:text-xs text-white/30">
-        © OJO Co., Ltd. All rights reserved.
-      </p>
-    </div>
-  </footer>
 </section>
+
+<!-- ========== 6. 신청하지 마세요 ========== -->
+<section class="sec sec--dark" id="not-for">
+  <div class="wrap">
+    <div class="label reveal">Not for everyone</div>
+    <h2 class="h2 reveal">이런 분은<br /><em>신청하지 마세요.</em></h2>
+
+    <div class="nots">
+      <div class="not reveal">
+        <div class="x" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></div>
+        <div><h3>지금 방식은 그대로 두고, 결과만 바뀌길 원하는 분</h3><p>문제가 확인되면 가격도, 구성도, 일하는 방식도 바꿀 수 있어야 합니다.</p></div>
+      </div>
+      <div class="not reveal">
+        <div class="x" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></div>
+        <div><h3>사업을 함께 펼쳐볼 생각이 없는 분</h3><p>고객이 왜 사는지, 얼마가 남는지 펼쳐봐야 바꿀 곳이 보입니다.</p></div>
+      </div>
+      <div class="not reveal">
+        <div class="x" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></div>
+        <div><h3>광고를 대신 돌려줄 곳만 찾는 분</h3><p>이 진단은 광고가 아니라 사업 전체를 봅니다.</p></div>
+      </div>
+      <div class="not reveal">
+        <div class="x" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></div>
+        <div><h3>아직 팔고 있는 상품이 없는 분</h3><p>이미 운영 중인 사업에서, 막힌 곳을 찾는 진단입니다.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 7. 셀프 진단 테스트 ========== -->
+<section class="sec sec--light" id="self-test">
+  <div class="wrap self-grid">
+    <div>
+      <div class="label reveal">Self check</div>
+      <h2 class="h2 reveal">신청이 망설여진다면,<br /><em>셀프 진단 테스트</em>부터.</h2>
+      <p class="lead reveal">예, 아니요로 답하는 <strong>아홉 개 질문</strong>입니다.</p>
+      <p class="lead reveal">'아니요'가 몰린 곳이 대표님 사업에서 비어 있는 곳이고, 왜 비어 있는지는 짧은 책 한 권으로 풀어드립니다.</p>
+      <!-- TODO: 셀프 진단 테스트 실제 주소로 교체 (SELF_TEST_URL) -->
+      <a href="#" class="btn btn--primary reveal" id="self-test-link">셀프 진단 테스트 <span class="arrow">→</span></a>
+    </div>
+
+    <div class="sheet reveal" aria-label="셀프 진단 테스트 미리보기">
+      <div class="sheet-top"><b>셀프 진단 테스트</b><span>9문항</span></div>
+      <div class="q">
+        <p><span class="num">1</span>경쟁사 가격을 보지 않고도, 우리 가격을 설명할 수 있나요?</p>
+        <div class="yn"><button type="button" class="y" aria-pressed="false">예</button><button type="button" class="n" aria-pressed="false">아니요</button></div>
+      </div>
+      <div class="q">
+        <p><span class="num">2</span>받지 않기로 정한 고객이 있나요?</p>
+        <div class="yn"><button type="button" class="y" aria-pressed="false">예</button><button type="button" class="n" aria-pressed="false">아니요</button></div>
+      </div>
+      <div class="q">
+        <p><span class="num">3</span>대표님이 일주일 자리를 비워도, 일이 돌아가나요?</p>
+        <div class="yn"><button type="button" class="y" aria-pressed="false">예</button><button type="button" class="n" aria-pressed="false">아니요</button></div>
+      </div>
+      <div class="q ghost" aria-hidden="true">
+        <p><span class="num">4</span><span class="bar" style="width:78%"></span></p>
+        <div class="yn"><button type="button" tabindex="-1">예</button><button type="button" tabindex="-1">아니요</button></div>
+      </div>
+      <div class="q ghost" aria-hidden="true">
+        <p><span class="num">5</span><span class="bar" style="width:62%"></span></p>
+        <div class="yn"><button type="button" tabindex="-1">예</button><button type="button" tabindex="-1">아니요</button></div>
+      </div>
+      <div class="sheet-foot">나머지 6문항은 테스트에서 이어집니다</div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 8. 신청 ========== -->
+<section class="sec sec--dark final" id="apply">
+  <div class="wrap">
+    <p class="q1 reveal">처음 사업을 시작할 때 원했던 것,</p>
+    <p class="q2 reveal"><span class="hl">아직 늦지 않았습니다.</span></p>
+    <button type="button" class="btn btn--primary reveal" data-open-modal>1:1 사업구조 진단 <span class="arrow">→</span></button>
+  </div>
+</section>
+
+</main>
+
+<footer class="ftr">
+  <div class="wrap">
+    <span class="logo">OJO<span>.</span></span>
+    <p>OJO Co., Ltd. · 사업자등록번호 338-08-02627</p>
+    <p>대표전화 <a href="tel:1666-9287">1666-9287</a></p>
+    <p style="margin-top:8px">© OJO Co., Ltd. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- 휴대폰 고정 버튼 (히어로를 지나면) -->
+<div class="sticky" id="sticky">
+  <button type="button" class="btn btn--primary" data-open-modal>1:1 사업구조 진단 <span class="arrow">→</span></button>
+</div>
 
 
 <!-- ========== MODAL: 신청 폼 ========== -->
-<div id="apply-modal" class="fixed inset-0 z-50 hidden items-center justify-center px-4" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-  <div class="modal-backdrop absolute inset-0" data-close-modal></div>
-
-  <div class="relative w-full max-w-lg bg-white rounded-2xl shadow-2xl max-h-[92vh] overflow-y-auto modal-scroll">
-    <button type="button" data-close-modal
-      class="absolute top-4 right-4 w-9 h-9 flex items-center justify-center rounded-full text-ink/60 hover:bg-ink/5"
-      aria-label="닫기">
+<div id="apply-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+  <div class="bd" data-close-modal></div>
+  <div class="panel">
+    <button type="button" class="x" data-close-modal aria-label="닫기">
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
     </button>
-
-    <div class="px-6 md:px-8 pt-8 pb-2">
-      <h3 id="modal-title" class="text-xl md:text-2xl font-extrabold text-ink leading-snug">
-        무료 상담 신청
-      </h3>
-      <p class="mt-2 text-sm md:text-base text-ink/70">
-        담당자가 24시간 내 연락드려<br/>구조 개선 상담 일정을 안내드립니다.
-      </p>
+    <div class="head">
+      <div class="label">Apply</div>
+      <h3 id="modal-title">1:1 사업구조 진단 신청</h3>
+      <p>남겨주신 연락처로 사전 진단서를 안내드립니다.</p>
     </div>
 
-    <form id="apply-form" class="px-6 md:px-8 py-6 space-y-5" novalidate>
+    <form id="apply-form" novalidate>
       <div>
-        <label for="company" class="field-label">업체명 <span class="text-danger">*</span></label>
-        <input id="company" name="company" type="text" required
-          class="field-input mt-2" placeholder="예) (주)오조" />
+        <label for="company" class="field-label">업체명 <span>*</span></label>
+        <input id="company" name="company" type="text" required class="field-input" placeholder="예) (주)오조" />
+      </div>
+      <div>
+        <label for="ceo" class="field-label">대표자명 <span>*</span></label>
+        <input id="ceo" name="ceo" type="text" required class="field-input" placeholder="예) 홍길동" />
+      </div>
+      <div>
+        <label for="phone" class="field-label">핸드폰번호 <span>*</span></label>
+        <input id="phone" name="phone" type="tel" required class="field-input" placeholder="010-1234-5678" inputmode="numeric" />
+        <p class="help">숫자만 입력하면 자동으로 형식이 맞춰집니다.</p>
       </div>
 
-      <div>
-        <label for="ceo" class="field-label">대표자명 <span class="text-danger">*</span></label>
-        <input id="ceo" name="ceo" type="text" required
-          class="field-input mt-2" placeholder="예) 홍길동" />
-      </div>
-
-      <div>
-        <label for="phone" class="field-label">핸드폰번호 <span class="text-danger">*</span></label>
-        <input id="phone" name="phone" type="tel" required
-          class="field-input mt-2" placeholder="010-1234-5678" inputmode="numeric" />
-        <p class="mt-1 text-xs text-ink/55">숫자만 입력하면 자동으로 형식이 맞춰집니다.</p>
-      </div>
-
-      <!-- 개인정보 동의 -->
-      <div class="rounded-xl bg-paper border border-ink/10 px-4 py-3.5 mt-2">
-        <label for="agree" class="flex items-start gap-3 cursor-pointer">
-          <input id="agree" name="agree" type="checkbox" required
-                 class="mt-0.5 w-5 h-5 accent-navy shrink-0" />
-          <span class="text-xs md:text-sm text-ink/80 leading-snug">
-            <span class="font-bold text-navy">(필수)</span> 개인정보 수집·이용에 동의합니다.
-            <button type="button" id="toggle-privacy" class="ml-1 text-navy underline underline-offset-2">자세히</button>
-          </span>
+      <div class="agree">
+        <label for="agree">
+          <input id="agree" name="agree" type="checkbox" required />
+          <span><span class="req">(필수)</span> 개인정보 수집·이용에 동의합니다.<button type="button" class="tg" id="toggle-privacy">자세히</button></span>
         </label>
-        <div id="privacy-detail" class="hidden mt-3 pt-3 border-t border-ink/10 text-[11px] md:text-xs text-ink/65 leading-relaxed space-y-1">
+        <div id="privacy-detail" class="privacy">
           <p>· <b>수집 항목</b>: 업체명, 대표자명, 핸드폰번호</p>
-          <p>· <b>이용 목적</b>: 상담 일정 안내 및 정책자금 구조 개선 상담</p>
-          <p>· <b>보유 기간</b>: 상담 종료 후 6개월 보관 후 즉시 파기</p>
+          <p>· <b>이용 목적</b>: 사전 진단서 안내 및 1:1 사업구조 진단 일정 안내</p>
+          <p>· <b>보유 기간</b>: 진단 종료 후 6개월 보관 후 즉시 파기</p>
           <p>· <b>제3자 제공</b>: 제공하지 않음</p>
-          <p>· 동의를 거부할 권리가 있으며, 거부 시 상담 신청이 불가합니다.</p>
+          <p>· 동의를 거부할 권리가 있으며, 거부 시 신청이 불가합니다.</p>
         </div>
       </div>
 
-      <button type="submit"
-        class="btn-cta w-full bg-navy hover:bg-navy-deep text-white font-bold text-base md:text-lg rounded-full px-6 py-4 shadow-cta hover:shadow-cta-hover mt-2">
-        ▶  상담 신청하기
-      </button>
+      <button type="submit" class="btn btn--primary">신청하기</button>
     </form>
   </div>
 </div>
@@ -1001,108 +894,91 @@
 
 <!-- ========== JS ========== -->
 <script>
-  /* ---------- Intersection Observer (reveal) ---------- */
+  /* 셀프 진단 테스트 주소 — 준비되면 여기에 넣으세요 */
+  const SELF_TEST_URL = '';
+
   (function () {
+    const link = document.getElementById('self-test-link');
+    if (!link) return;
+    if (SELF_TEST_URL) { link.href = SELF_TEST_URL; link.target = '_blank'; link.rel = 'noopener'; }
+    else link.addEventListener('click', (e) => { e.preventDefault(); alert('셀프 진단 테스트는 곧 열립니다.'); });
+  })();
+
+  /* ---------- 스크롤 등장 ---------- */
+  (function () {
+    requestAnimationFrame(() => document.querySelectorAll('.hero .reveal').forEach(el => el.classList.add('in')));
     const els = document.querySelectorAll('.reveal');
-    if (!('IntersectionObserver' in window)) {
-      els.forEach(el => el.classList.add('is-visible'));
-      return;
-    }
+    if (!('IntersectionObserver' in window)) { els.forEach(el => el.classList.add('in')); return; }
     const io = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('is-visible');
-          io.unobserve(entry.target);
-        }
+        if (entry.isIntersecting) { entry.target.classList.add('in'); io.unobserve(entry.target); }
       });
     }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
     els.forEach(el => io.observe(el));
   })();
 
-  /* ---------- 카운트업 애니메이션 ---------- */
+  /* ---------- 휴대폰 고정 버튼: 히어로를 지나면 ---------- */
   (function () {
-    const counters = document.querySelectorAll('.counter');
-    if (!counters.length) return;
-
-    function animate(el) {
-      const target = parseInt(el.dataset.target, 10);
-      if (isNaN(target)) return;
-      const duration = 1400;
-      const start = performance.now();
-      function step(now) {
-        const p = Math.min((now - start) / duration, 1);
-        const eased = 1 - Math.pow(1 - p, 3);
-        el.textContent = Math.floor(eased * target).toLocaleString();
-        if (p < 1) requestAnimationFrame(step);
-        else el.textContent = target.toLocaleString();
-      }
-      requestAnimationFrame(step);
-    }
-
-    if (!('IntersectionObserver' in window)) {
-      counters.forEach(el => animate(el));
-      return;
-    }
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting && !entry.target.dataset.animated) {
-          entry.target.dataset.animated = 'true';
-          animate(entry.target);
-          io.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.4 });
-    counters.forEach(el => io.observe(el));
+    const sticky = document.getElementById('sticky');
+    const hero = document.getElementById('hero');
+    const finalSec = document.getElementById('apply');
+    if (!sticky || !hero || !('IntersectionObserver' in window)) return;
+    let pastHero = false, atFinal = false;
+    const sync = () => sticky.classList.toggle('show', pastHero && !atFinal);
+    new IntersectionObserver(([e]) => { pastHero = !e.isIntersecting && e.boundingClientRect.top < 0; sync(); }).observe(hero);
+    new IntersectionObserver(([e]) => { atFinal = e.isIntersecting; sync(); }, { threshold: 0.3 }).observe(finalSec);
   })();
 
-  /* ---------- 스크롤 진행 막대 ---------- */
+  /* ---------- 사례 넘기기 ---------- */
   (function () {
-    const bar = document.getElementById('scroll-progress');
-    if (!bar) return;
-    let ticking = false;
-    function update() {
-      const h = document.documentElement;
-      const max = h.scrollHeight - h.clientHeight;
-      const pct = max > 0 ? (h.scrollTop / max) * 100 : 0;
-      bar.style.width = pct + '%';
-      ticking = false;
-    }
-    window.addEventListener('scroll', () => {
-      if (!ticking) { requestAnimationFrame(update); ticking = true; }
-    }, { passive: true });
+    const rail = document.getElementById('rail');
+    const prev = document.querySelector('[data-rail="prev"]');
+    const next = document.querySelector('[data-rail="next"]');
+    if (!rail) return;
+    const step = () => { const c = rail.querySelector('.case'); return c ? c.offsetWidth + 16 : 400; };
+    const update = () => {
+      prev.disabled = rail.scrollLeft < 4;
+      next.disabled = rail.scrollLeft + rail.clientWidth > rail.scrollWidth - 4;
+    };
+    prev.addEventListener('click', () => rail.scrollBy({ left: -step(), behavior: 'smooth' }));
+    next.addEventListener('click', () => rail.scrollBy({ left: step(), behavior: 'smooth' }));
+    rail.addEventListener('scroll', update, { passive: true });
+    window.addEventListener('resize', update);
     update();
+  })();
+
+  /* ---------- 체크리스트 미리보기 예/아니요 ---------- */
+  (function () {
+    document.querySelectorAll('.q:not(.ghost) .yn').forEach(group => {
+      const btns = group.querySelectorAll('button');
+      btns.forEach(b => b.addEventListener('click', () => {
+        btns.forEach(o => o.setAttribute('aria-pressed', o === b ? 'true' : 'false'));
+      }));
+    });
   })();
 
   /* ---------- Modal open/close ---------- */
   (function () {
     const modal = document.getElementById('apply-modal');
-    const openers = document.querySelectorAll('[data-open-modal]');
-    const closers = document.querySelectorAll('[data-close-modal]');
     let lastFocused = null;
-
     function openModal() {
       lastFocused = document.activeElement;
-      modal.classList.remove('hidden');
-      modal.classList.add('flex');
+      modal.classList.add('open');
       document.body.style.overflow = 'hidden';
-      const firstInput = modal.querySelector('input, select, textarea, button');
-      if (firstInput) setTimeout(() => firstInput.focus(), 50);
+      const first = modal.querySelector('input');
+      if (first) setTimeout(() => first.focus(), 50);
     }
     function closeModal() {
-      modal.classList.add('hidden');
-      modal.classList.remove('flex');
+      modal.classList.remove('open');
       document.body.style.overflow = '';
       if (lastFocused) lastFocused.focus();
     }
-
-    openers.forEach(b => b.addEventListener('click', openModal));
-    closers.forEach(b => b.addEventListener('click', closeModal));
+    document.querySelectorAll('[data-open-modal]').forEach(b => b.addEventListener('click', openModal));
+    document.querySelectorAll('[data-close-modal]').forEach(b => b.addEventListener('click', closeModal));
     document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && !modal.classList.contains('hidden')) closeModal();
+      if (e.key === 'Escape' && modal.classList.contains('open')) closeModal();
     });
   })();
-
-
 
   /* ---------- 핸드폰 자동 포매팅 ---------- */
   (function () {
@@ -1125,71 +1001,45 @@
     // Google Sheets webhook (Apps Script 웹 앱)
     const SHEETS_WEBHOOK_URL = 'https://script.google.com/macros/s/AKfycbwgqMK0QGXUe7OLsUH_8IPWQn00pWbplTyD8nKrkH3imSNFpgL9NUAxplbUHFwYbHg2/exec';
 
-    function setError(input, hasError) {
-      if (hasError) input.classList.add('field-error');
-      else input.classList.remove('field-error');
-    }
+    function setError(input, hasError) { input.classList.toggle('field-error', hasError); }
 
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
-      const company = form.company;
-      const ceo     = form.ceo;
-      const phone   = form.phone;
-      const agree   = form.agree;
+      const { company, ceo, phone, agree } = form;
 
       let firstError = null;
-      const checks = [
-        [company, !company.value.trim()],
-        [ceo,     !ceo.value.trim()],
-        [phone,   !phoneRe.test(phone.value.trim())],
-      ];
-      checks.forEach(([el, bad]) => {
-        setError(el, bad);
-        if (bad && !firstError) firstError = el;
-      });
+      [[company, !company.value.trim()], [ceo, !ceo.value.trim()], [phone, !phoneRe.test(phone.value.trim())]]
+        .forEach(([el, bad]) => { setError(el, bad); if (bad && !firstError) firstError = el; });
 
       if (firstError) {
         firstError.focus();
         if (firstError === phone)        alert('핸드폰번호를 010-0000-0000 형식으로 입력해주세요.');
         else if (firstError === company) alert('업체명을 입력해주세요.');
-        else if (firstError === ceo)     alert('대표자명을 입력해주세요.');
+        else                             alert('대표자명을 입력해주세요.');
         return;
       }
+      if (!agree.checked) { alert('개인정보 수집·이용 동의에 체크해주세요.'); agree.focus(); return; }
 
-      if (!agree.checked) {
-        alert('개인정보 수집·이용 동의에 체크해주세요.');
-        agree.focus();
-        return;
-      }
-
-      // 제출 버튼 비활성화 (중복 클릭 방지)
       const submitBtn = form.querySelector('button[type="submit"]');
-      const originalLabel = submitBtn.innerHTML;
       submitBtn.disabled = true;
-      submitBtn.innerHTML = '전송 중...';
+      submitBtn.textContent = '전송 중...';
 
-      // 구글 시트로 데이터 전송 (URL 설정된 경우에만)
-      if (SHEETS_WEBHOOK_URL && !SHEETS_WEBHOOK_URL.includes('YOUR_APPS_SCRIPT')) {
-        try {
-          await fetch(SHEETS_WEBHOOK_URL, {
-            method: 'POST',
-            mode: 'no-cors',
-            headers: { 'Content-Type': 'text/plain;charset=utf-8' },
-            body: JSON.stringify({
-              company: company.value.trim(),
-              ceo:     ceo.value.trim(),
-              phone:   phone.value.trim(),
-              timestamp: new Date().toISOString(),
-              source: window.location.href,
-            }),
-          });
-        } catch (err) {
-          console.error('[OJO] 시트 전송 실패:', err);
-          // 실패해도 사용자 경험 위해 땡큐로 이동
-        }
+      try {
+        await fetch(SHEETS_WEBHOOK_URL, {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+          body: JSON.stringify({
+            company: company.value.trim(),
+            ceo:     ceo.value.trim(),
+            phone:   phone.value.trim(),
+            timestamp: new Date().toISOString(),
+            source: window.location.href,
+          }),
+        });
+      } catch (err) {
+        console.error('[OJO] 시트 전송 실패:', err);
       }
-
-      // 땡큐 페이지로 이동
       window.location.href = 'thanks.html';
     });
 
@@ -1198,13 +1048,13 @@
       if (el) el.addEventListener('input', () => setError(el, false));
     });
 
-    // 개인정보 자세히 토글
     const toggle = document.getElementById('toggle-privacy');
     const detail = document.getElementById('privacy-detail');
     if (toggle && detail) {
-      toggle.addEventListener('click', () => {
-        const hidden = detail.classList.toggle('hidden');
-        toggle.textContent = hidden ? '자세히' : '닫기';
+      toggle.addEventListener('click', (e) => {
+        e.preventDefault();
+        const open = detail.classList.toggle('open');
+        toggle.textContent = open ? '닫기' : '자세히';
       });
     }
   })();
